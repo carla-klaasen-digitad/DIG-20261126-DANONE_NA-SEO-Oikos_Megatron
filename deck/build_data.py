@@ -68,7 +68,7 @@ for t in TOPICS:
     for name,dom in COMP.items():
         m=[x for x in doms if dom in x['domain']]
         comps[name]=({"sov":m[0]['sov'],"rank":m[0]['rank'],"traffic":m[0]['traffic']} if m else None)
-    seo[t]={"total_traffic":total_traffic,"topic":t,"funnel":FUNNEL[t],"n_domains":len(doms),"top5":doms[:5],
+    seo[t]={"domains":[{"domain":x["domain"],"sov":x["sov"],"traffic":x["traffic"]} for x in doms],"total_traffic":total_traffic,"topic":t,"funnel":FUNNEL[t],"n_domains":len(doms),"top5":doms[:5],
             "oikos":o,"oikos_traffic_keywords":round(tot),"oikos_triplezero_traffic":round(tz),"oikos_brand_kw_traffic":round(br),
             "competitors":comps}
 
@@ -111,7 +111,7 @@ for t in TOPICS:
     sent=[fn(r['Net Sentiment']) for r in rs if fn(r['Net Sentiment']) is not None]
     men=collections.Counter(m.strip() for r in rs for m in r['Top Mentions'].split(',') if m.strip())
     ai[t]={"topic":t,"funnel":FUNNEL[t],"n":len(rs),"branded":sum(r['Is Branded']=='yes' for r in rs),
-        "avg_visibility":round(sum(vis)/len(vis),1),"zero":sum(v==0 for v in vis),
+        "avg_visibility":round(sum(vis)/len(vis),1),"avg_sov":round(sum((fn(r["SoV"]) or 0) for r in rs)/len(rs),1),"zero":sum(v==0 for v in vis),
         "avg_sentiment":round(sum(sent)/len(sent),1) if sent else None,
         "avg_position":round(sum(pos)/len(pos),1) if pos else None,
         "mentions":dict(men),
@@ -156,3 +156,41 @@ out["brand"]=bd
 out["attrs"]={st:{a:[{"v":k,"vol":round(x)} for k,x in c.most_common(4)] for a,c in d_.items()} for st,d_ in attrs.items()}
 (root/'data/deck_data.json').write_text(json.dumps(out,indent=1))
 print(bd["stage"]); print(bd["top_branded"][:6])
+
+# --- extra data: monthly series, queen queries, subcategories, brand split
+MN12=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+_it=_wb['Keywords Listing Updated'].iter_rows(values_only=True); _h=next(_it)
+mlabels=[str(_h[i]) for i in range(45,93)]
+series={st:[0.0]*48 for st in ("Discover","Evaluate","Buy")}; bseries=[0.0]*48
+queen={}; topic_best={t:(0,None) for t in TOPICS}; sub=collections.defaultdict(collections.Counter)
+split=collections.Counter()
+def subbrand(k):
+    w=k.lower()
+    if 'tripe' in w or 'tripl' in w or 'triple' in w: return 'Triple Zero'
+    if 'fusion' in w: return 'Fusion'
+    if 'remix' in w: return 'Remix'
+    if re.search(r'\b(shake|shakes|drink|drinks)\b',w): return 'Shakes and drinks'
+    if re.search(r'\bpro\b',w): return 'Oikos Pro'
+    return 'Oikos (general)'
+for r in _it:
+    if not r[1] or r[3] not in FUNNEL: continue
+    if r[43] and not str(r[43]).startswith('Canonical'): continue
+    vals=[x if isinstance(x,(int,float)) else 0 for x in r[45:93]]
+    st=FUNNEL[r[3]]
+    for i,x in enumerate(vals): series[st][i]+=x
+    av=[x for x in r[45:93] if isinstance(x,(int,float))]; a=sum(av)/len(av) if av else (r[44] if isinstance(r[44],(int,float)) else 0)
+    brand_k=isbrand(str(r[1]))
+    if brand_k:
+        for i,x in enumerate(vals): bseries[i]+=x
+        split[subbrand(str(r[1]))]+=a
+    else:
+        if a>topic_best[r[3]][0] and not r[18] and not r[19]: topic_best[r[3]]=(a,str(r[1]))
+        if r[4]: sub[st][str(r[4])]+=a
+out["trend"]={st:[round(x) for x in v] for st,v in series.items()}
+out["trend_labels"]=mlabels
+out["brand_trend"]=[round(x) for x in bseries]
+out["brand_split"]={k:round(v) for k,v in split.most_common()}
+out["queen"]={t:{"kw":topic_best[t][1],"vol":round(topic_best[t][0])} for t in TOPICS}
+out["subcats"]={st:[{"v":k,"vol":round(x)} for k,x in c.most_common(6)] for st,c in sub.items()}
+(root/'data/deck_data.json').write_text(json.dumps(out,indent=1))
+print(out["brand_split"]); print(out["queen"]); print(out["trend_labels"][:2],out["trend_labels"][-2:])

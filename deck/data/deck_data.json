@@ -1,6 +1,113 @@
 {
  "seo": {
   "Moment": {
+   "domains": [
+    {
+     "domain": "www.healthline.com",
+     "sov": 34.86,
+     "traffic": 140780.85
+    },
+    {
+     "domain": "health.clevelandclinic.org",
+     "sov": 13.79,
+     "traffic": 55705.16
+    },
+    {
+     "domain": "www.youtube.com",
+     "sov": 10.47,
+     "traffic": 42286.1
+    },
+    {
+     "domain": "www.bonappetit.com",
+     "sov": 3.69,
+     "traffic": 14915.9
+    },
+    {
+     "domain": "www.delish.com",
+     "sov": 3.49,
+     "traffic": 14112.61
+    },
+    {
+     "domain": "www.bbcgoodfood.com",
+     "sov": 2.89,
+     "traffic": 11664.39
+    },
+    {
+     "domain": "www.bswhealth.com",
+     "sov": 2.55,
+     "traffic": 10308.14
+    },
+    {
+     "domain": "www.health.com",
+     "sov": 2.07,
+     "traffic": 8374.39
+    },
+    {
+     "domain": "www.eatingwell.com",
+     "sov": 2.01,
+     "traffic": 8121.59
+    },
+    {
+     "domain": "pantheonclinical.com",
+     "sov": 1.84,
+     "traffic": 7433.55
+    },
+    {
+     "domain": "www.reddit.com",
+     "sov": 1.56,
+     "traffic": 6312.05
+    },
+    {
+     "domain": "www.ironman.com",
+     "sov": 1.52,
+     "traffic": 6133.63
+    },
+    {
+     "domain": "www.walmart.com",
+     "sov": 1.46,
+     "traffic": 5897.08
+    },
+    {
+     "domain": "www.harvardhealth.org",
+     "sov": 1.02,
+     "traffic": 4116.07
+    },
+    {
+     "domain": "www.nutritionnews.abbott",
+     "sov": 0.91,
+     "traffic": 3655.76
+    },
+    {
+     "domain": "www.goodrx.com",
+     "sov": 0.9,
+     "traffic": 3624.26
+    },
+    {
+     "domain": "www.hy-vee.com",
+     "sov": 0.84,
+     "traffic": 3398.7
+    },
+    {
+     "domain": "www.uclahealth.org",
+     "sov": 0.79,
+     "traffic": 3196.81
+    },
+    {
+     "domain": "www.verywellhealth.com",
+     "sov": 0.74,
+     "traffic": 3006.27
+    },
+    {
+     "domain": "therealfooddietitians.com",
+     "sov": 0.66,
+     "traffic": 2647.88
+    },
+    {
+     "domain": "www.oikos.com",
+     "sov": 0.0,
+     "traffic": 0.0
+    }
+   ],
    "total_traffic": 403826.57,
    "topic": "Moment",
    "funnel": "Discover",
@@ -53,6 +160,113 @@
    }
   },
   "Recipe": {
+   "domains": [
+    {
+     "domain": "www.youtube.com",
+     "sov": 10.41,
+     "traffic": 10470.08
+    },
+    {
+     "domain": "eatwithclarity.com",
+     "sov": 5.72,
+     "traffic": 5750.32
+    },
+    {
+     "domain": "tastesbetterfromscratch.com",
+     "sov": 4.82,
+     "traffic": 4846.72
+    },
+    {
+     "domain": "whatmollymade.com",
+     "sov": 4.74,
+     "traffic": 4763.5
+    },
+    {
+     "domain": "www.premierprotein.com",
+     "sov": 4.15,
+     "traffic": 4175.58
+    },
+    {
+     "domain": "www.delish.com",
+     "sov": 4.06,
+     "traffic": 4078.82
+    },
+    {
+     "domain": "www.bakeandbacon.com",
+     "sov": 3.6,
+     "traffic": 3620.39
+    },
+    {
+     "domain": "www.wellplated.com",
+     "sov": 3.15,
+     "traffic": 3170.03
+    },
+    {
+     "domain": "www.eatingwell.com",
+     "sov": 2.85,
+     "traffic": 2866.81
+    },
+    {
+     "domain": "danishealthyeats.com",
+     "sov": 2.82,
+     "traffic": 2838.39
+    },
+    {
+     "domain": "www.facebook.com",
+     "sov": 2.74,
+     "traffic": 2759.34
+    },
+    {
+     "domain": "theproteinchef.co",
+     "sov": 2.54,
+     "traffic": 2557.44
+    },
+    {
+     "domain": "proteinpints.com",
+     "sov": 2.52,
+     "traffic": 2534.0
+    },
+    {
+     "domain": "www.laurafuentes.com",
+     "sov": 1.78,
+     "traffic": 1790.6
+    },
+    {
+     "domain": "www.thekitchn.com",
+     "sov": 1.67,
+     "traffic": 1675.43
+    },
+    {
+     "domain": "www.gimmesomeoven.com",
+     "sov": 1.65,
+     "traffic": 1655.46
+    },
+    {
+     "domain": "www.eatingbirdfood.com",
+     "sov": 1.63,
+     "traffic": 1639.03
+    },
+    {
+     "domain": "www.allrecipes.com",
+     "sov": 1.37,
+     "traffic": 1376.35
+    },
+    {
+     "domain": "nourishedbynic.com",
+     "sov": 1.37,
+     "traffic": 1374.29
+    },
+    {
+     "domain": "easymacromeals.com",
+     "sov": 1.29,
+     "traffic": 1299.88
+    },
+    {
+     "domain": "www.oikos.com",
+     "sov": 0.46,
+     "traffic": 458.26
+    }
+   ],
    "total_traffic": 100551.19,
    "topic": "Recipe",
    "funnel": "Discover",
@@ -109,6 +323,108 @@
    }
   },
   "Health": {
+   "domains": [
+    {
+     "domain": "hartfordhealthcare.org",
+     "sov": 11.88,
+     "traffic": 23024.64
+    },
+    {
+     "domain": "www.goodrx.com",
+     "sov": 10.34,
+     "traffic": 20040.12
+    },
+    {
+     "domain": "www.musclemilk.com",
+     "sov": 5.19,
+     "traffic": 10063.31
+    },
+    {
+     "domain": "www.reddit.com",
+     "sov": 5.02,
+     "traffic": 9721.25
+    },
+    {
+     "domain": "examine.com",
+     "sov": 4.47,
+     "traffic": 8671.19
+    },
+    {
+     "domain": "health.clevelandclinic.org",
+     "sov": 3.55,
+     "traffic": 6879.02
+    },
+    {
+     "domain": "www.harvardhealth.org",
+     "sov": 2.63,
+     "traffic": 5100.89
+    },
+    {
+     "domain": "www.healthline.com",
+     "sov": 2.47,
+     "traffic": 4780.56
+    },
+    {
+     "domain": "www.youtube.com",
+     "sov": 2.22,
+     "traffic": 4301.12
+    },
+    {
+     "domain": "www.oikos.com",
+     "sov": 1.98,
+     "traffic": 3834.37
+    },
+    {
+     "domain": "www.mayoclinic.org",
+     "sov": 1.94,
+     "traffic": 3763.5
+    },
+    {
+     "domain": "www.amazon.com",
+     "sov": 1.88,
+     "traffic": 3636.92
+    },
+    {
+     "domain": "www.usada.org",
+     "sov": 1.82,
+     "traffic": 3530.72
+    },
+    {
+     "domain": "pmc.ncbi.nlm.nih.gov",
+     "sov": 1.63,
+     "traffic": 3153.71
+    },
+    {
+     "domain": "www.forhers.com",
+     "sov": 1.36,
+     "traffic": 2636.99
+    },
+    {
+     "domain": "www.goldsgym.com",
+     "sov": 1.26,
+     "traffic": 2442.14
+    },
+    {
+     "domain": "www.webmd.com",
+     "sov": 1.22,
+     "traffic": 2360.21
+    },
+    {
+     "domain": "hartfordhospital.org",
+     "sov": 1.16,
+     "traffic": 2248.18
+    },
+    {
+     "domain": "www.urmc.rochester.edu",
+     "sov": 1.13,
+     "traffic": 2186.59
+    },
+    {
+     "domain": "www.mayoclinichealthsystem.org",
+     "sov": 1.04,
+     "traffic": 2013.1
+    }
+   ],
    "total_traffic": 193802.59,
    "topic": "Health",
    "funnel": "Discover",
@@ -161,6 +477,108 @@
    }
   },
   "Ingredient": {
+   "domains": [
+    {
+     "domain": "en.wikipedia.org",
+     "sov": 19.92,
+     "traffic": 6071.89
+    },
+    {
+     "domain": "www.reddit.com",
+     "sov": 11.82,
+     "traffic": 3602.66
+    },
+    {
+     "domain": "fairlife.com",
+     "sov": 10.26,
+     "traffic": 3126.61
+    },
+    {
+     "domain": "www.amazon.com",
+     "sov": 4.61,
+     "traffic": 1404.45
+    },
+    {
+     "domain": "chobani.com",
+     "sov": 4.27,
+     "traffic": 1301.25
+    },
+    {
+     "domain": "www.marianos.com",
+     "sov": 3.49,
+     "traffic": 1065.05
+    },
+    {
+     "domain": "www.oikos.com",
+     "sov": 3.38,
+     "traffic": 1030.9
+    },
+    {
+     "domain": "www.target.com",
+     "sov": 3.38,
+     "traffic": 1028.58
+    },
+    {
+     "domain": "www.levels.com",
+     "sov": 2.37,
+     "traffic": 722.67
+    },
+    {
+     "domain": "www.darigold.com",
+     "sov": 2.17,
+     "traffic": 661.48
+    },
+    {
+     "domain": "www.facebook.com",
+     "sov": 1.96,
+     "traffic": 597.49
+    },
+    {
+     "domain": "www.youtube.com",
+     "sov": 1.76,
+     "traffic": 537.67
+    },
+    {
+     "domain": "www.walmart.com",
+     "sov": 1.7,
+     "traffic": 519.02
+    },
+    {
+     "domain": "siggis.com",
+     "sov": 1.52,
+     "traffic": 463.32
+    },
+    {
+     "domain": "www.kroger.com",
+     "sov": 1.25,
+     "traffic": 381.22
+    },
+    {
+     "domain": "www.ralphs.com",
+     "sov": 1.23,
+     "traffic": 373.97
+    },
+    {
+     "domain": "www.theleangreenbean.com",
+     "sov": 1.12,
+     "traffic": 341.76
+    },
+    {
+     "domain": "www.thekitchn.com",
+     "sov": 0.98,
+     "traffic": 299.19
+    },
+    {
+     "domain": "www.samsclub.com",
+     "sov": 0.97,
+     "traffic": 296.46
+    },
+    {
+     "domain": "home.fage",
+     "sov": 0.94,
+     "traffic": 286.58
+    }
+   ],
    "total_traffic": 30475.61,
    "topic": "Ingredient",
    "funnel": "Evaluate",
@@ -221,6 +639,108 @@
    }
   },
   "Testimonial": {
+   "domains": [
+    {
+     "domain": "www.forbes.com",
+     "sov": 12.56,
+     "traffic": 10400.08
+    },
+    {
+     "domain": "chobani.com",
+     "sov": 10.59,
+     "traffic": 8770.47
+    },
+    {
+     "domain": "www.amazon.com",
+     "sov": 6.95,
+     "traffic": 5754.35
+    },
+    {
+     "domain": "www.eatingwell.com",
+     "sov": 6.02,
+     "traffic": 4982.37
+    },
+    {
+     "domain": "www.reddit.com",
+     "sov": 5.66,
+     "traffic": 4687.45
+    },
+    {
+     "domain": "www.healthline.com",
+     "sov": 4.3,
+     "traffic": 3560.8
+    },
+    {
+     "domain": "www.youtube.com",
+     "sov": 4.11,
+     "traffic": 3398.47
+    },
+    {
+     "domain": "www.today.com",
+     "sov": 2.92,
+     "traffic": 2414.22
+    },
+    {
+     "domain": "www.premierprotein.com",
+     "sov": 2.79,
+     "traffic": 2308.58
+    },
+    {
+     "domain": "www.allrecipes.com",
+     "sov": 2.44,
+     "traffic": 2017.74
+    },
+    {
+     "domain": "www.cheeseprofessor.com",
+     "sov": 2.11,
+     "traffic": 1745.55
+    },
+    {
+     "domain": "www.bonappetit.com",
+     "sov": 2.05,
+     "traffic": 1696.92
+    },
+    {
+     "domain": "www.facebook.com",
+     "sov": 1.96,
+     "traffic": 1624.11
+    },
+    {
+     "domain": "www.harvardhealth.org",
+     "sov": 1.53,
+     "traffic": 1269.62
+    },
+    {
+     "domain": "www.oikos.com",
+     "sov": 1.46,
+     "traffic": 1209.51
+    },
+    {
+     "domain": "www.kroger.com",
+     "sov": 1.43,
+     "traffic": 1184.11
+    },
+    {
+     "domain": "zoe.com",
+     "sov": 1.37,
+     "traffic": 1131.83
+    },
+    {
+     "domain": "health.clevelandclinic.org",
+     "sov": 1.31,
+     "traffic": 1087.78
+    },
+    {
+     "domain": "www.verywellhealth.com",
+     "sov": 1.27,
+     "traffic": 1053.57
+    },
+    {
+     "domain": "nymag.com",
+     "sov": 1.21,
+     "traffic": 1000.23
+    }
+   ],
    "total_traffic": 82783.93,
    "topic": "Testimonial",
    "funnel": "Evaluate",
@@ -281,6 +801,108 @@
    }
   },
   "Product": {
+   "domains": [
+    {
+     "domain": "en.wikipedia.org",
+     "sov": 11.13,
+     "traffic": 126495.69
+    },
+    {
+     "domain": "www.oikos.com",
+     "sov": 8.58,
+     "traffic": 97537.53
+    },
+    {
+     "domain": "goodculture.com",
+     "sov": 6.84,
+     "traffic": 77799.93
+    },
+    {
+     "domain": "www.youtube.com",
+     "sov": 4.61,
+     "traffic": 52426.26
+    },
+    {
+     "domain": "www.amazon.com",
+     "sov": 4.1,
+     "traffic": 46623.12
+    },
+    {
+     "domain": "fairlife.com",
+     "sov": 3.4,
+     "traffic": 38638.45
+    },
+    {
+     "domain": "chobani.com",
+     "sov": 3.07,
+     "traffic": 34916.76
+    },
+    {
+     "domain": "www.bonappetit.com",
+     "sov": 3.07,
+     "traffic": 34903.6
+    },
+    {
+     "domain": "www.premierprotein.com",
+     "sov": 2.99,
+     "traffic": 33961.87
+    },
+    {
+     "domain": "www.yoplait.com",
+     "sov": 2.05,
+     "traffic": 23267.45
+    },
+    {
+     "domain": "www.walmart.com",
+     "sov": 1.94,
+     "traffic": 22066.69
+    },
+    {
+     "domain": "www.loveandlemons.com",
+     "sov": 1.76,
+     "traffic": 20060.66
+    },
+    {
+     "domain": "www.facebook.com",
+     "sov": 1.74,
+     "traffic": 19801.18
+    },
+    {
+     "domain": "www.verywellhealth.com",
+     "sov": 1.54,
+     "traffic": 17539.65
+    },
+    {
+     "domain": "www.reddit.com",
+     "sov": 1.54,
+     "traffic": 17537.42
+    },
+    {
+     "domain": "www.nourishmovelove.com",
+     "sov": 1.49,
+     "traffic": 16940.92
+    },
+    {
+     "domain": "nutritionsource.hsph.harvard.edu",
+     "sov": 1.44,
+     "traffic": 16376.93
+    },
+    {
+     "domain": "www.instagram.com",
+     "sov": 1.34,
+     "traffic": 15249.03
+    },
+    {
+     "domain": "www.target.com",
+     "sov": 1.28,
+     "traffic": 14540.71
+    },
+    {
+     "domain": "www.theoi.com",
+     "sov": 1.22,
+     "traffic": 13918.5
+    }
+   ],
    "total_traffic": 1136974.82,
    "topic": "Product",
    "funnel": "Buy",
@@ -345,6 +967,108 @@
    }
   },
   "Flavor": {
+   "domains": [
+    {
+     "domain": "www.oikos.com",
+     "sov": 10.2,
+     "traffic": 6236.24
+    },
+    {
+     "domain": "www.amazon.com",
+     "sov": 6.42,
+     "traffic": 3927.73
+    },
+    {
+     "domain": "www.foodfaithfitness.com",
+     "sov": 5.97,
+     "traffic": 3650.98
+    },
+    {
+     "domain": "www.allrecipes.com",
+     "sov": 5.02,
+     "traffic": 3070.11
+    },
+    {
+     "domain": "www.yoplait.com",
+     "sov": 4.77,
+     "traffic": 2917.86
+    },
+    {
+     "domain": "www.premierprotein.com",
+     "sov": 3.44,
+     "traffic": 2102.65
+    },
+    {
+     "domain": "www.walmart.com",
+     "sov": 3.26,
+     "traffic": 1994.74
+    },
+    {
+     "domain": "kite-hill.com",
+     "sov": 2.72,
+     "traffic": 1666.26
+    },
+    {
+     "domain": "www.target.com",
+     "sov": 2.52,
+     "traffic": 1544.42
+    },
+    {
+     "domain": "www.reddit.com",
+     "sov": 1.96,
+     "traffic": 1199.84
+    },
+    {
+     "domain": "www.youtube.com",
+     "sov": 1.9,
+     "traffic": 1160.0
+    },
+    {
+     "domain": "www.lightandfit.com",
+     "sov": 1.81,
+     "traffic": 1109.23
+    },
+    {
+     "domain": "noosayoghurt.com",
+     "sov": 1.77,
+     "traffic": 1085.2
+    },
+    {
+     "domain": "chobani.com",
+     "sov": 1.66,
+     "traffic": 1016.06
+    },
+    {
+     "domain": "www.facebook.com",
+     "sov": 1.45,
+     "traffic": 886.67
+    },
+    {
+     "domain": "www.stonyfield.com",
+     "sov": 1.41,
+     "traffic": 865.38
+    },
+    {
+     "domain": "www.dannon.com",
+     "sov": 1.39,
+     "traffic": 851.97
+    },
+    {
+     "domain": "www.costco.com",
+     "sov": 1.33,
+     "traffic": 810.76
+    },
+    {
+     "domain": "www.traderjoes.com",
+     "sov": 1.21,
+     "traffic": 740.52
+    },
+    {
+     "domain": "fairlife.com",
+     "sov": 1.15,
+     "traffic": 704.81
+    }
+   ],
    "total_traffic": 61168.15,
    "topic": "Flavor",
    "funnel": "Buy",
@@ -409,6 +1133,108 @@
    }
   },
   "Packaging": {
+   "domains": [
+    {
+     "domain": "www.amazon.com",
+     "sov": 18.19,
+     "traffic": 96568.11
+    },
+    {
+     "domain": "www.premierprotein.com",
+     "sov": 16.72,
+     "traffic": 88783.98
+    },
+    {
+     "domain": "www.walmart.com",
+     "sov": 6.8,
+     "traffic": 36108.85
+    },
+    {
+     "domain": "www.oikos.com",
+     "sov": 6.62,
+     "traffic": 35145.97
+    },
+    {
+     "domain": "liveowyn.com",
+     "sov": 5.48,
+     "traffic": 29099.07
+    },
+    {
+     "domain": "www.pureprotein.com",
+     "sov": 4.11,
+     "traffic": 21820.48
+    },
+    {
+     "domain": "www.forbes.com",
+     "sov": 3.4,
+     "traffic": 18034.44
+    },
+    {
+     "domain": "www.youtube.com",
+     "sov": 2.08,
+     "traffic": 11048.27
+    },
+    {
+     "domain": "drinkkoia.com",
+     "sov": 1.88,
+     "traffic": 9995.99
+    },
+    {
+     "domain": "www.optimumnutrition.com",
+     "sov": 1.74,
+     "traffic": 9265.52
+    },
+    {
+     "domain": "www.ensure.com",
+     "sov": 1.6,
+     "traffic": 8507.8
+    },
+    {
+     "domain": "www.reddit.com",
+     "sov": 1.57,
+     "traffic": 8360.54
+    },
+    {
+     "domain": "fairlife.com",
+     "sov": 1.5,
+     "traffic": 7957.45
+    },
+    {
+     "domain": "www.samsclub.com",
+     "sov": 1.48,
+     "traffic": 7872.24
+    },
+    {
+     "domain": "www.facebook.com",
+     "sov": 1.43,
+     "traffic": 7605.32
+    },
+    {
+     "domain": "www.questnutrition.com",
+     "sov": 1.43,
+     "traffic": 7600.83
+    },
+    {
+     "domain": "www.costco.com",
+     "sov": 1.4,
+     "traffic": 7442.08
+    },
+    {
+     "domain": "www.target.com",
+     "sov": 1.2,
+     "traffic": 6365.92
+    },
+    {
+     "domain": "sameday.costco.com",
+     "sov": 0.95,
+     "traffic": 5038.06
+    },
+    {
+     "domain": "www.healthline.com",
+     "sov": 0.81,
+     "traffic": 4301.39
+    }
+   ],
    "total_traffic": 530998.98,
    "topic": "Packaging",
    "funnel": "Buy",
@@ -469,6 +1295,113 @@
    }
   },
   "Purchase": {
+   "domains": [
+    {
+     "domain": "www.doordash.com",
+     "sov": 25.47,
+     "traffic": 13629.69
+    },
+    {
+     "domain": "www.yelp.com",
+     "sov": 18.4,
+     "traffic": 9847.06
+    },
+    {
+     "domain": "www.walmart.com",
+     "sov": 13.92,
+     "traffic": 7447.31
+    },
+    {
+     "domain": "rockinprotein.com",
+     "sov": 6.85,
+     "traffic": 3664.52
+    },
+    {
+     "domain": "www.aldi.us",
+     "sov": 6.84,
+     "traffic": 3662.38
+    },
+    {
+     "domain": "www.costco.com",
+     "sov": 3.05,
+     "traffic": 1633.69
+    },
+    {
+     "domain": "www.amazon.com",
+     "sov": 2.41,
+     "traffic": 1290.89
+    },
+    {
+     "domain": "www.cvs.com",
+     "sov": 1.78,
+     "traffic": 950.24
+    },
+    {
+     "domain": "www.kroger.com",
+     "sov": 1.75,
+     "traffic": 937.5
+    },
+    {
+     "domain": "www.meijer.com",
+     "sov": 1.66,
+     "traffic": 888.44
+    },
+    {
+     "domain": "www.samsclub.com",
+     "sov": 1.44,
+     "traffic": 771.29
+    },
+    {
+     "domain": "www.premierprotein.com",
+     "sov": 1.44,
+     "traffic": 768.14
+    },
+    {
+     "domain": "www.visitokc.com",
+     "sov": 1.31,
+     "traffic": 702.26
+    },
+    {
+     "domain": "www.facebook.com",
+     "sov": 1.17,
+     "traffic": 625.53
+    },
+    {
+     "domain": "www.reddit.com",
+     "sov": 1.03,
+     "traffic": 553.38
+    },
+    {
+     "domain": "www.costcobusinesscentre.ca",
+     "sov": 0.97,
+     "traffic": 517.37
+    },
+    {
+     "domain": "eatshakes.com",
+     "sov": 0.94,
+     "traffic": 502.15
+    },
+    {
+     "domain": "www.wholefoodsmarket.com",
+     "sov": 0.9,
+     "traffic": 482.88
+    },
+    {
+     "domain": "www.instagram.com",
+     "sov": 0.64,
+     "traffic": 342.86
+    },
+    {
+     "domain": "www.target.com",
+     "sov": 0.6,
+     "traffic": 321.77
+    },
+    {
+     "domain": "www.oikos.com",
+     "sov": 0.16,
+     "traffic": 84.65
+    }
+   ],
    "total_traffic": 53515.83,
    "topic": "Purchase",
    "funnel": "Buy",
@@ -691,6 +1624,7 @@
    "n": 11,
    "branded": 0,
    "avg_visibility": 21.5,
+   "avg_sov": 5.2,
    "zero": 3,
    "avg_sentiment": 22.5,
    "avg_position": 5.2,
@@ -809,6 +1743,7 @@
    "n": 9,
    "branded": 1,
    "avg_visibility": 19.6,
+   "avg_sov": 11.8,
    "zero": 6,
    "avg_sentiment": 10.0,
    "avg_position": 3.2,
@@ -908,6 +1843,7 @@
    "n": 12,
    "branded": 3,
    "avg_visibility": 20.3,
+   "avg_sov": 9.8,
    "zero": 7,
    "avg_sentiment": 9.1,
    "avg_position": 4.1,
@@ -1032,6 +1968,7 @@
    "n": 11,
    "branded": 3,
    "avg_visibility": 51.5,
+   "avg_sov": 18.3,
    "zero": 1,
    "avg_sentiment": 7.5,
    "avg_position": 5.0,
@@ -1149,6 +2086,7 @@
    "n": 30,
    "branded": 11,
    "avg_visibility": 56.2,
+   "avg_sov": 20.2,
    "zero": 4,
    "avg_sentiment": 22.8,
    "avg_position": 3.8,
@@ -1438,6 +2376,7 @@
    "n": 12,
    "branded": 4,
    "avg_visibility": 40.7,
+   "avg_sov": 8.8,
    "zero": 4,
    "avg_sentiment": 10.5,
    "avg_position": 4.0,
@@ -1565,6 +2504,7 @@
    "n": 11,
    "branded": 5,
    "avg_visibility": 36.1,
+   "avg_sov": 13.5,
    "zero": 2,
    "avg_sentiment": 6.5,
    "avg_position": 2.5,
@@ -1682,6 +2622,7 @@
    "n": 7,
    "branded": 1,
    "avg_visibility": 26.6,
+   "avg_sov": 7.4,
    "zero": 4,
    "avg_sentiment": 14.7,
    "avg_position": 2.3,
@@ -1763,6 +2704,7 @@
    "n": 8,
    "branded": 5,
    "avg_visibility": 63.4,
+   "avg_sov": 13.6,
    "zero": 0,
    "avg_sentiment": 30.1,
    "avg_position": 5.0,
@@ -2126,5 +3068,383 @@
     }
    ]
   }
+ },
+ "trend": {
+  "Discover": [
+   844000,
+   818230,
+   1498020,
+   1253590,
+   1438320,
+   1318060,
+   1242250,
+   1238060,
+   1306850,
+   1295440,
+   1165200,
+   1138020,
+   1063090,
+   1033970,
+   1929880,
+   1610780,
+   1635080,
+   1649270,
+   1556010,
+   1687650,
+   1747950,
+   1683390,
+   1626800,
+   1594890,
+   1438450,
+   1294760,
+   2395390,
+   1947610,
+   2357930,
+   2025710,
+   2018150,
+   2116510,
+   2103070,
+   2067460,
+   2044150,
+   1815930,
+   1498430,
+   1489230,
+   2758690,
+   2325630,
+   2546890,
+   2267000,
+   2013050,
+   1826760,
+   1857390,
+   1961640,
+   1557790,
+   1453190
+  ],
+  "Evaluate": [
+   451960,
+   448970,
+   823540,
+   696700,
+   745740,
+   741190,
+   682880,
+   669620,
+   703430,
+   684540,
+   596220,
+   590370,
+   553600,
+   565740,
+   934480,
+   839880,
+   858180,
+   791390,
+   770360,
+   802570,
+   847990,
+   828410,
+   780380,
+   682660,
+   663660,
+   632150,
+   1098450,
+   830770,
+   998420,
+   901550,
+   911730,
+   1079090,
+   1065910,
+   1078700,
+   1027670,
+   1071470,
+   760310,
+   758220,
+   1360050,
+   1158660,
+   1294420,
+   1133840,
+   1466920,
+   1206830,
+   1149920,
+   1089420,
+   1352480,
+   1100540
+  ],
+  "Buy": [
+   3553920,
+   3424070,
+   4617800,
+   4204330,
+   4595240,
+   4423870,
+   4401520,
+   4204510,
+   4253970,
+   4364640,
+   4115230,
+   4399860,
+   3745490,
+   3474650,
+   5028200,
+   5035000,
+   5236730,
+   5781920,
+   5755110,
+   5430070,
+   6028950,
+   5731630,
+   5590850,
+   6024400,
+   5030530,
+   4804500,
+   6454940,
+   5789820,
+   6899390,
+   6914360,
+   6607780,
+   6392370,
+   6827950,
+   6952210,
+   6540870,
+   6794390,
+   5562410,
+   5477540,
+   7296270,
+   6714060,
+   7177380,
+   6810570,
+   6234130,
+   6002430,
+   6385610,
+   6766540,
+   6260290,
+   7164920
+  ]
+ },
+ "trend_labels": [
+  "Nov 2022",
+  "Dec 2022",
+  "Jan 2023",
+  "Feb 2023",
+  "Mar 2023",
+  "Apr 2023",
+  "May 2023",
+  "Jun 2023",
+  "Jul 2023",
+  "Aug 2023",
+  "Sep 2023",
+  "Oct 2023",
+  "Nov 2023",
+  "Dec 2023",
+  "Jan 2024",
+  "Feb 2024",
+  "Mar 2024",
+  "Apr 2024",
+  "May 2024",
+  "Jun 2024",
+  "Jul 2024",
+  "Aug 2024",
+  "Sep 2024",
+  "Oct 2024",
+  "Nov 2024",
+  "Dec 2024",
+  "Jan 2025",
+  "Feb 2025",
+  "Mar 2025",
+  "Apr 2025",
+  "May 2025",
+  "Jun 2025",
+  "Jul 2025",
+  "Aug 2025",
+  "Sep 2025",
+  "Oct 2025",
+  "Nov 2025",
+  "Dec 2025",
+  "Jan 2026",
+  "Feb 2026",
+  "Mar 2026",
+  "Apr 2026",
+  "May 2026",
+  "Jun 2026",
+  "Jul 2026",
+  "Aug 2026",
+  "Sep 2026",
+  "Oct 2026"
+ ],
+ "brand_trend": [
+  90110,
+  80200,
+  158720,
+  170960,
+  169160,
+  161400,
+  139550,
+  139010,
+  150230,
+  163010,
+  148860,
+  148330,
+  126830,
+  113350,
+  224480,
+  225970,
+  225950,
+  229470,
+  239470,
+  282170,
+  334400,
+  339860,
+  371610,
+  316010,
+  256110,
+  242640,
+  462380,
+  492380,
+  505950,
+  427630,
+  410470,
+  458990,
+  493320,
+  503850,
+  434960,
+  356190,
+  295640,
+  287540,
+  558730,
+  539100,
+  526330,
+  456320,
+  465960,
+  469290,
+  487760,
+  478260,
+  424400,
+  468210
+ ],
+ "brand_split": {
+  "Oikos (general)": 276943,
+  "Triple Zero": 66688,
+  "Shakes and drinks": 63942,
+  "Oikos Pro": 26731,
+  "Remix": 2319,
+  "Fusion": 843
+ },
+ "queen": {
+  "Moment": {
+   "kw": "high protein snacks",
+   "vol": 152198
+  },
+  "Recipe": {
+   "kw": "high protein breakfast recipes",
+   "vol": 81385
+  },
+  "Health": {
+   "kw": "protein for muscle gain",
+   "vol": 50288
+  },
+  "Ingredient": {
+   "kw": "protein in protein shake",
+   "vol": 286167
+  },
+  "Testimonial": {
+   "kw": "top protein drinks",
+   "vol": 30233
+  },
+  "Product": {
+   "kw": "protein shake",
+   "vol": 244792
+  },
+  "Flavor": {
+   "kw": "cherry berry yogurt",
+   "vol": 26548
+  },
+  "Packaging": {
+   "kw": "bottled protein shakes",
+   "vol": 11617
+  },
+  "Purchase": {
+   "kw": "protein shakes near me",
+   "vol": 73798
+  }
+ },
+ "subcats": {
+  "Buy": [
+   {
+    "v": "Competitors - shakes & drinks",
+    "vol": 2333956
+   },
+   {
+    "v": "Competitors - cups & yogurt",
+    "vol": 1214915
+   },
+   {
+    "v": "Generic protein yogurt",
+    "vol": 620611
+   },
+   {
+    "v": "Protein shakes & drinks (generic)",
+    "vol": 559637
+   },
+   {
+    "v": "Adjacent products",
+    "vol": 550592
+   },
+   {
+    "v": "Flavors",
+    "vol": 130732
+   }
+  ],
+  "Discover": [
+   {
+    "v": "Adjacent products",
+    "vol": 350402
+   },
+   {
+    "v": "Moments & occasions",
+    "vol": 278063
+   },
+   {
+    "v": "Health & GLP-1",
+    "vol": 235474
+   },
+   {
+    "v": "Protein shakes - usage & timing",
+    "vol": 156542
+   },
+   {
+    "v": "Generic protein yogurt",
+    "vol": 154574
+   },
+   {
+    "v": "Recipes",
+    "vol": 144901
+   }
+  ],
+  "Evaluate": [
+   {
+    "v": "Protein shakes & drinks (generic)",
+    "vol": 448087
+   },
+   {
+    "v": "Protein shakes - health & diet",
+    "vol": 146802
+   },
+   {
+    "v": "Generic protein yogurt",
+    "vol": 143109
+   },
+   {
+    "v": "Competitors - shakes & drinks",
+    "vol": 69371
+   },
+   {
+    "v": "Protein shakes - usage & timing",
+    "vol": 49057
+   },
+   {
+    "v": "Not relevant - review",
+    "vol": 36571
+   }
+  ]
  }
 }

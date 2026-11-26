@@ -9,152 +9,287 @@
     {
      "n": 1,
      "tpl": "cover",
-     "name": "Cover, mandate and agenda"
+     "name": "Cover and agenda",
+     "core": true
     },
     {
      "n": 2,
+     "tpl": "context",
+     "name": "Context of the mandate",
+     "core": true
+    },
+    {
+     "n": 3,
      "tpl": "method",
-     "name": "Method, glossary and limits"
+     "name": "Method in 4 steps",
+     "core": true
+    },
+    {
+     "n": 4,
+     "tpl": "glossary",
+     "name": "Glossary and limits",
+     "core": false
+    },
+    {
+     "n": 5,
+     "tpl": "globaldata",
+     "name": "Global data",
+     "core": false
     }
    ]
   },
   {
    "id": 1,
-   "label": "Global vision",
-   "phrase": "How Oikos Pro is found, seen, and understood across the internet, including Google, AI, and social.",
+   "label": "Brand",
+   "phrase": "The demand that carries the Oikos name, and how Oikos stands against competitors on it.",
    "slides": [
     {
-     "n": 3,
-     "tpl": "treemap",
-     "name": "Where the demand is"
-    },
-    {
-     "n": 4,
-     "tpl": "sov",
-     "name": "Oikos against competitors in Google"
-    },
-    {
-     "n": 5,
-     "tpl": "brand",
-     "name": "The demand that carries the Oikos name"
-    },
-    {
      "n": 6,
-     "tpl": "ai_global",
-     "name": "Who answers in AI instead of Oikos"
+     "tpl": "brand1",
+     "name": "The demand that carries the Oikos name",
+     "core": true
+    },
+    {
+     "n": 7,
+     "tpl": "brand2",
+     "name": "Oikos against competition on the brand",
+     "core": true
     }
    ]
   },
   {
    "id": 2,
-   "label": "Discover",
-   "phrase": "Moment, Recipe and Health: how people first look for a high-protein option.",
+   "label": "Global vision",
+   "phrase": "How Oikos Pro is found, seen, and understood across the internet, including Google, AI, and social.",
    "slides": [
     {
-     "n": 7,
-     "tpl": "stage_demand",
-     "stage": "Discover",
-     "name": "Demand, trends and attributes"
-    },
-    {
      "n": 8,
-     "tpl": "bench",
-     "stage": "Discover",
-     "name": "SEO competitive environment"
+     "tpl": "treemap",
+     "name": "Where the demand is, by funnel stage",
+     "core": true
     },
     {
      "n": 9,
-     "tpl": "ai_stage",
-     "stage": "Discover",
-     "name": "Visibility in AI answers"
+     "tpl": "stage_compare",
+     "name": "SEO and AI by funnel stage",
+     "core": true
     }
    ]
   },
   {
    "id": 3,
-   "label": "Evaluate",
-   "phrase": "Ingredients and Testimonial: what people read and worry about before they buy.",
+   "label": "Discover",
+   "phrase": "Moment, Recipe and Health: how people first look for a high-protein option.",
    "slides": [
     {
      "n": 10,
-     "tpl": "stage_demand",
-     "stage": "Evaluate",
-     "name": "Demand, trends and attributes"
+     "tpl": "demand_cat",
+     "name": "Demand and categories",
+     "core": true,
+     "stage": "Discover"
     },
     {
      "n": 11,
-     "tpl": "bench",
-     "stage": "Evaluate",
-     "name": "SEO competitive environment"
+     "tpl": "trends",
+     "name": "Trends",
+     "core": false,
+     "stage": "Discover"
     },
     {
      "n": 12,
-     "tpl": "sentiment",
-     "name": "Taste and texture in AI answers"
+     "tpl": "attrs",
+     "name": "Attribute view",
+     "core": false,
+     "stage": "Discover"
     },
     {
      "n": 13,
-     "tpl": "ai_stage",
-     "stage": "Evaluate",
-     "name": "Visibility in AI answers"
+     "tpl": "seo_env",
+     "name": "SEO competitive environment",
+     "core": true,
+     "stage": "Discover"
+    },
+    {
+     "n": 14,
+     "tpl": "ai_vis",
+     "name": "Visibility in AI answers",
+     "core": true,
+     "stage": "Discover"
     }
    ]
   },
   {
    "id": 4,
-   "label": "Buy",
-   "phrase": "Product, Flavor, Packaging and Purchase: choosing, comparing and paying.",
+   "label": "Evaluate",
+   "phrase": "Ingredients and Testimonial: what people read and worry about before they buy.",
    "slides": [
     {
-     "n": 14,
-     "tpl": "stage_demand",
-     "stage": "Buy",
-     "name": "Demand, trends and attributes"
-    },
-    {
      "n": 15,
-     "tpl": "bench",
-     "stage": "Buy",
-     "name": "SEO competitive environment"
+     "tpl": "demand_cat",
+     "name": "Demand and categories",
+     "core": true,
+     "stage": "Evaluate"
     },
     {
      "n": 16,
-     "tpl": "ai_stage",
-     "stage": "Buy",
-     "name": "Visibility in AI answers, price and shrinkflation"
+     "tpl": "trends",
+     "name": "Trends",
+     "core": false,
+     "stage": "Evaluate"
+    },
+    {
+     "n": 17,
+     "tpl": "attrs",
+     "name": "Attribute view",
+     "core": false,
+     "stage": "Evaluate"
+    },
+    {
+     "n": 18,
+     "tpl": "seo_env",
+     "name": "SEO competitive environment",
+     "core": true,
+     "stage": "Evaluate"
+    },
+    {
+     "n": 19,
+     "tpl": "sentiment",
+     "name": "Taste and texture in AI answers",
+     "core": true
+    },
+    {
+     "n": 20,
+     "tpl": "ai_vis",
+     "name": "Visibility in AI answers",
+     "core": true,
+     "stage": "Evaluate"
     }
    ]
   },
   {
    "id": 5,
+   "label": "Buy",
+   "phrase": "Product, Flavor, Packaging and Purchase: choosing, comparing and paying.",
+   "slides": [
+    {
+     "n": 21,
+     "tpl": "demand_cat",
+     "name": "Demand and categories",
+     "core": true,
+     "stage": "Buy"
+    },
+    {
+     "n": 22,
+     "tpl": "trends",
+     "name": "Trends",
+     "core": false,
+     "stage": "Buy"
+    },
+    {
+     "n": 23,
+     "tpl": "attrs",
+     "name": "Attribute view",
+     "core": false,
+     "stage": "Buy"
+    },
+    {
+     "n": 24,
+     "tpl": "seo_env",
+     "name": "SEO competitive environment",
+     "core": true,
+     "stage": "Buy"
+    },
+    {
+     "n": 25,
+     "tpl": "ai_vis",
+     "name": "Visibility in AI answers, price and shrinkflation",
+     "core": true,
+     "stage": "Buy"
+    },
+    {
+     "n": 26,
+     "tpl": "todo",
+     "name": "Retail platform demand",
+     "core": false,
+     "visual": "Retail platform search demand and advertising reach by funnel stage, as in the Nespresso decks (Amazon demand)",
+     "needs": "Retail platform data (Thomas)"
+    }
+   ]
+  },
+  {
+   "id": 6,
    "label": "Recommendations",
    "phrase": "What to do first, in Google and in AI answers.",
    "slides": [
     {
-     "n": 17,
+     "n": 27,
+     "tpl": "synthesis",
+     "name": "Synthesis and prioritization",
+     "core": true
+    },
+    {
+     "n": 28,
      "tpl": "todo",
-     "name": "Social signals and retail platforms",
-     "visual": "One card per platform (YouTube, Reddit, Meta, media sites, retail platforms): what is said about Oikos Pro, with a verdict to target, watch or ignore",
-     "needs": "Social listening and retail platform data (Thomas)"
+     "name": "Content salience",
+     "core": false,
+     "visual": "Pages analysed, most frequent entity, unused angle, as in Econofitness",
+     "needs": "Page-level content analysis of oikos.com"
     },
     {
-     "n": 18,
-     "tpl": "summary",
-     "name": "Synthesis and prioritization"
+     "n": 29,
+     "tpl": "platform",
+     "name": "YouTube",
+     "core": false,
+     "platform": "youtube.com",
+     "label": "YouTube"
     },
     {
-     "n": 19,
+     "n": 30,
+     "tpl": "platform",
+     "name": "Reddit",
+     "core": false,
+     "platform": "reddit.com",
+     "label": "Reddit"
+    },
+    {
+     "n": 31,
+     "tpl": "platform",
+     "name": "Meta (Facebook and Instagram)",
+     "core": false,
+     "platform": "facebook.com",
+     "label": "Facebook"
+    },
+    {
+     "n": 32,
+     "tpl": "todo",
+     "name": "Media sites",
+     "core": false,
+     "visual": "Press mentions (12 months) and media or directory domains in the SEO results per topic",
+     "needs": "Social listening (Thomas); typing of domains as media"
+    },
+    {
+     "n": 33,
      "tpl": "todo",
      "name": "SEO and GEO prioritization matrix",
-     "visual": "Matrix with the 2 inspirational competitors, for SEO and for GEO. Layout to follow the boss's baseline matrix (Oikos US Matrice de prio).",
+     "core": true,
+     "visual": "Matrix with the 2 inspirational competitors, for SEO and for GEO. Layout to follow the boss's baseline matrix (Oikos US Matrice de prio)",
      "needs": "Confirm how the baseline matrix data was produced; confirm the 2 competitors"
     },
     {
-     "n": 20,
+     "n": 34,
+     "tpl": "todo",
+     "name": "Conclusion and growth perspectives",
+     "core": false,
+     "visual": "Total uncaptured potential and the workstreams to run in parallel",
+     "needs": "Matrix and recommendations"
+    },
+    {
+     "n": 35,
      "tpl": "todo",
      "name": "Next steps and production plan",
-     "visual": "Timeline of next steps, plus production plan cards: topic, format, channel, target, priority, writer scope",
-     "needs": "Recommendations (not written), Thomas's writer role email"
+     "core": true,
+     "visual": "Next steps in order, then production plan cards: topic, format, channel, target, priority, writer scope",
+     "needs": "Recommendations, Thomas's writer role email"
     }
    ]
   }
