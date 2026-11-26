@@ -16,7 +16,9 @@ total = d["total_volume"]
 pct = lambda f: round(100 * fun_vol[f] / total)
 top = max(d["topics"], key=lambda t: t["volume"])
 
+CUR=[""]
 def head(eyebrow, title, verdict):
+    eyebrow = CUR[0] if eyebrow in ("01 · Method","02 · Global vision") else eyebrow
     return f'<div class="sl">{esc(eyebrow)}</div><h2 class="sh">{esc(title)}</h2><p class="verdict">{esc(verdict)}</p>'
 
 def insights(items):
@@ -70,6 +72,7 @@ def todo(s):
 
 
 TOPICS=["Moment","Recipe","Health","Ingredient","Testimonial","Product","Flavor","Packaging","Purchase"]
+FIRST_OF={"Moment":"Discover","Ingredient":"Evaluate","Product":"Buy"}
 STAGE_TOPICS={"Discover":["Moment","Recipe","Health"],"Evaluate":["Ingredient","Testimonial"],"Buy":["Product","Flavor","Packaging","Purchase"]}
 SEO=D["seo"]; AI=D["ai"]; SEA=D["season"]
 vol={t["topic"]:t["volume"] for t in d["topics"]}
@@ -78,9 +81,13 @@ lab=lambda t:TOPIC_LABEL.get(t,t)
 tot_traffic=sum(SEO[t]["oikos_traffic_keywords"] for t in TOPICS)
 brand_traffic=sum(SEO[t]["oikos_brand_kw_traffic"] for t in TOPICS)
 tz_traffic=sum(SEO[t]["oikos_triplezero_traffic"] for t in TOPICS)
+SOV_MAX=12
+DEM_MAX=70
 STALE='<span class="tagp stale">STALE · SE Ranking 22 Nov, old project</span>'
 ONEWK='<span class="tagp live">SE Visible · 111 prompts · 20-26 Nov</span>'
 RECO_TBD="[Recommendation to write after review: action, target, P1 / P2 / P3]"
+def axis(txt):
+    return f'<div class="brow axis"><div></div><div class="ax"><span>0</span><span>{txt}</span></div><div></div></div>'
 def bar(label,val,mx,txt,cls="",sub=""):
     w=0 if not mx else max(0,min(100,100*val/mx))
     return f'<div class="brow"><div class="bl">{esc(label)}<small>{esc(sub)}</small></div><div class="bt"><i class="{cls}" style="width:{w:.1f}%"></i></div><div class="bv">{esc(txt)}</div></div>'
@@ -91,16 +98,37 @@ def ai_avg(topics,key="avg_visibility"):
 def ai_zero(topics): return sum(AI[t]["zero"] for t in topics), sum(AI[t]["n"] for t in topics)
 
 def sov():
-    mx=max((SEO[t]["oikos"]["sov"] if SEO[t]["oikos"] else 0) for t in TOPICS)
-    rows="".join(bar(lab(t),(SEO[t]["oikos"]["sov"] if SEO[t]["oikos"] else 0),mx,sov_txt(SEO[t]["oikos"]),"",
-        f'{FUNNEL_OF[t]} · est. traffic {SEO[t]["oikos_traffic_keywords"]:,}') for t in TOPICS)
-    ins=[(f"{round(100*brand_traffic/tot_traffic)}%","of Oikos estimated traffic comes from brand-name keywords and misspellings","Keywords in the Top 20, stale"),
+    comps=["Chobani","fairlife","Premier Protein"]
+    def val(t,name):
+        if name=="Oikos": o=SEO[t]["oikos"]; return (o["sov"],o["rank"]) if o else (0.0,99)
+        c=SEO[t]["competitors"][name]; return (c["sov"],c["rank"]) if c else (None,None)
+    def derived(ts,name):
+        tot=sum(SEO[t]["total_traffic"] for t in ts)
+        tr=0
+        for t in ts:
+            o=SEO[t]["oikos"] if name=="Oikos" else SEO[t]["competitors"][name]
+            tr+=o["traffic"] if o else 0
+        return 100*tr/tot
+    allv=[val(t,n)[0] or 0 for t in TOPICS for n in ["Oikos"]+comps]
+    mx=max(5,((int(max(allv))//5)+1)*5)
+    def cell(v,rk,bold=False,derived_=False):
+        if v is None: return '<td class="c"><span class="dash">not in top 20</span></td>'
+        rtxt="" if (derived_ or rk is None or rk>20) else f" (#{rk})"
+        return f'<td class="c"><div class="mb"><i style="width:{100*v/mx:.1f}%"></i></div><span>{v:.1f}%{rtxt}</span></td>'
+    rows=""
+    for st,ts in STAGE_TOPICS.items():
+        rows+=f'<tr class="stg"><th>{st} <small>(derived)</small></th>'+"".join(cell(derived(ts,n),None,True,True) for n in ["Oikos"]+comps)+'</tr>'
+        for t in ts:
+            rows+=f'<tr><th class="t">{lab(t)}</th>'+"".join(cell(*val(t,n)) for n in ["Oikos"]+comps)+'</tr>'
+    n_lead=sum(1 for t in TOPICS if all((val(t,"Oikos")[0] or 0)>(val(t,c)[0] or 0) for c in comps))
+    cnt=lambda c:sum(1 for t in TOPICS if SEO[t]["competitors"][c])
+    ins=[(f"{round(100*brand_traffic/tot_traffic)}%","of Oikos estimated traffic comes from branded searches, leaving non-branded searches available for competitors to capitalize on","Keywords in the Top 20, stale"),
          (f"{round(100*tz_traffic/tot_traffic)}%","of Oikos estimated traffic lands on Triple Zero pages","URL of ranking page, stale"),
-         ("3 of 9","topics have Oikos outside the top 20 domains: Moment, Recipe, Purchase","Share of voice by topic, stale"),
-         (f'{SEO["Flavor"]["oikos"]["sov"]}%',"share of voice in Flavor, where Oikos ranks #1","Share of voice, stale")]
-    return head("02 · Global vision","Where Oikos wins and loses in Google",f"Oikos leads Flavor and Product, but almost entirely through brand-name searches.")+STALE+insights(ins)+\
-        f'<div class="vis"><h4>Oikos share of voice by topic</h4>{rows}</div>'+\
-        '<div class="note">Share of voice = share of estimated traffic in the topic keyword set, Google USA. Oikos in brand searches includes misspellings (okies, orkos, ikos). Old project: includes Triple Zero and ambiguous keywords. Re-export after the SE Ranking rebuild.</div>'+reco(RECO_TBD)
+         (f"{n_lead} of 9","topics where Oikos has a higher share of voice than Chobani, fairlife and Premier Protein","Share of voice, stale"),
+         (f"{cnt('Chobani')} / {cnt('fairlife')} / {cnt('Premier Protein')}","topics (of 9) where Chobani / fairlife / Premier Protein are in the top 20 domains","Share of voice, stale")]
+    return head("02 · Global vision","Where Oikos wins and loses in Google",f"Oikos out-ranks all three competitors in {n_lead} of 9 topics, almost entirely through branded searches.")+STALE+insights(ins)+\
+        f'<div class="vis"><h4>Share of voice by funnel stage and topic: Oikos vs candidate competitors</h4><table class="sovt"><tr><th></th><th>Oikos</th><th>Chobani</th><th>fairlife</th><th>Premier Protein</th></tr>{rows}</table></div>'+\
+        f'<div class="note">All bars share one scale (0 to {mx}%). Stage rows are derived: summed traffic of the domain across the stage topics ÷ summed topic traffic; a competitor outside a topic\'s top 20 counts as 0 there, so its stage figure is understated. Competitors are candidates, not chosen. Old project: includes Triple Zero and ambiguous keywords.</div>'+reco(RECO_TBD)
 
 def season():
     MN=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
@@ -111,6 +139,7 @@ def season():
         for k,v in enumerate(ix):
             a=max(0,min(1,(v-0.7)/0.8)); star=" peak" if MN[k]==SEA[t]["peak"] else ""
             cells+=f'<td class="hm{star}" style="background:rgba(184,0,28,{a:.2f});color:{"#fff" if a>.55 else "#2c2c2c"}">{v:.2f}</td>'
+        if t in FIRST_OF: body+=f'<tr class="stg"><th colspan="14">{FIRST_OF[t]}</th></tr>'
         body+=f'<tr><th>{lab(t)}</th>{cells}<td><b>{SEA[t]["peak"]}</b></td></tr>'
     jan=sum(SEA[t]["peak"]=="Jan" for t in TOPICS)
     ins=[(f"{jan} of 9","topics peak in January","Google Ads, 48 months, USA"),
@@ -121,9 +150,21 @@ def season():
         f'<div class="vis"><table class="heat">{head_row}{body}</table></div>'+\
         '<div class="note">Seasonality index = average volume of each calendar month across the 48 months (Nov 2022 to Oct 2026) ÷ the topic\'s monthly mean. Close variants counted once. Brand-name searches included.</div>'+reco(RECO_TBD)
 
+def _stats(ps):
+    if not ps: return None
+    v=[p["visibility"] or 0 for p in ps]; return (sum(v)/len(v), sum(1 for x in v if x==0), len(v))
 def ai_global():
-    mx=100
-    rows="".join(bar(lab(t),AI[t]["avg_visibility"],mx,f'{AI[t]["avg_visibility"]:.0f}% · {AI[t]["zero"]}/{AI[t]["n"]} prompts at zero',"",f'{AI[t]["n"]} prompts, {AI[t]["branded"]} branded') for t in TOPICS)
+    import html as _h
+    rows=""; cur=None
+    for t in TOPICS:
+        if FUNNEL_OF[t]!=cur: cur=FUNNEL_OF[t]; rows+=f'<div class="stgh">{cur}</div>'
+        ps=AI[t]["prompts"]; modes={}
+        for key,f in (("all",lambda p:True),("b",lambda p:p["branded"]=="yes"),("u",lambda p:p["branded"]=="no")):
+            st=_stats([p for p in ps if f(p)])
+            modes[key]=[0,"no prompts"] if not st else [round(st[0],1),f"{st[0]:.0f}% · {st[1]}/{st[2]} at zero"]
+        a=modes["all"]
+        rows+=f'<div class="brow" data-modes="{_h.escape(json.dumps(modes),quote=True)}"><div class="bl">{lab(t)}<small>{AI[t]["n"]} prompts, {AI[t]["branded"]} branded</small></div><div class="bt"><i style="width:{a[0]}%"></i></div><div class="bv">{a[1]}</div></div>'
+    toggle='<div class="toggle"><button class="tg on" data-mode="all">All prompts</button><button class="tg" data-mode="b">Branded</button><button class="tg" data-mode="u">Unbranded</button></div>'
     men=D["ai_brand_mentions"]; mm=max(men.values())
     mrows="".join(bar(k.title() if k!="oikos pro" else "Oikos Pro",v,mm,f"in {v} of {D['ai_total']} prompts","brandbar" if k=="oikos pro" else "") for k,v in sorted(men.items(),key=lambda x:-x[1]))
     z=D["ai_zero"]; br=[p for t in TOPICS for p in AI[t]["prompts"] if p["branded"]=="yes"]; ub=[p for t in TOPICS for p in AI[t]["prompts"] if p["branded"]=="no"]
@@ -133,14 +174,14 @@ def ai_global():
          (f'{men.get("chobani",0)}',f'prompts mention Chobani (Oikos Pro: {men.get("oikos pro",0)})',"Top Mentions column"),
          ("Pending","cited sources and competitor exports","SE Visible competitors / sources")]
     return head("02 · Global vision","Who answers in AI instead of Oikos",f"Oikos is absent from {z} of {D['ai_total']} tracked prompts; unbranded visibility is far lower.")+ONEWK+insights(ins)+\
-        f'<div class="two"><div class="vis"><h4>Average visibility by topic</h4>{rows}</div><div class="vis"><h4>Brands mentioned (tracked brands only)</h4>{mrows}<div class="ph small"><span class="tag">PENDING</span> Cited sources by domain: needs the SE Visible sources export.</div></div></div>'+\
+        f'<div class="two"><div class="vis"><h4>Average visibility by funnel stage and topic</h4>{toggle}{rows}</div><div class="vis"><h4>Brands mentioned (tracked brands only)</h4>{mrows}<div class="ph small"><span class="tag">PENDING</span> Cited sources by domain: needs the SE Visible sources export.</div></div></div>'+\
         '<div class="note">One week of data, 7 to 30 prompts per topic: indicative only. Engine(s) not stated in the export. Top Mentions only lists brands tracked in the project (Oikos Pro, Chobani, fairlife, Orgain, Nurri); Premier Protein is not tracked.</div>'+reco(RECO_TBD)
 
 def stage_seo(s):
     st=s["stage"]; ts=STAGE_TOPICS[st]
     stv=sum(vol[t] for t in ts); mxv=max(vol[t] for t in ts); mxs=max((SEO[t]["oikos"]["sov"] if SEO[t]["oikos"] else 0) for t in ts)
-    vrows="".join(bar(lab(t),vol[t],mxv,f"{vol[t]:,} / month","slate") for t in ts)
-    srows="".join(bar(lab(t),(SEO[t]["oikos"]["sov"] if SEO[t]["oikos"] else 0),mxs,sov_txt(SEO[t]["oikos"]),"",f'est. traffic {SEO[t]["oikos_traffic_keywords"]:,}') for t in ts)
+    vrows=axis(f"{DEM_MAX}% of total demand")+"".join(bar(lab(t),100*vol[t]/d["total_volume"],DEM_MAX,f'{100*vol[t]/d["total_volume"]:.1f}% of all demand · {vol[t]:,}/mo',"slate") for t in ts)
+    srows=axis(f"{SOV_MAX}% share of voice")+"".join(bar(lab(t),(SEO[t]["oikos"]["sov"] if SEO[t]["oikos"] else 0),SOV_MAX,sov_txt(SEO[t]["oikos"]),"",f'est. traffic {SEO[t]["oikos_traffic_keywords"]:,}') for t in ts)
     best=max(ts,key=lambda t:(SEO[t]["oikos"]["sov"] if SEO[t]["oikos"] else 0))
     weak=[lab(t) for t in ts if not SEO[t]["oikos"] or SEO[t]["oikos"]["rank"]>10]
     ins=[(f'{round(100*stv/d["total_volume"])}%',f"of total search demand is {st}","Keyword listing"),
@@ -150,7 +191,7 @@ def stage_seo(s):
     ver=f'In {st}, Oikos is strongest in {lab(best)}' + (f' and outside the top 10 in {", ".join(weak)}.' if weak else '.')
     return head(f"0{s['part'][1]} · {st}" if False else s["part"],s["name"],ver)+STALE+insights(ins)+\
         f'<div class="two"><div class="vis"><h4>Search demand (avg monthly volume)</h4>{vrows}</div><div class="vis"><h4>Oikos share of voice (rank among domains)</h4>{srows}</div></div>'+\
-        '<div class="note">Demand includes brand-name searches. Rank is among the top 20 domains per topic. Share of voice is not additive across topics.</div>'+reco(RECO_TBD)
+        '<div class="note">Bars use the same fixed scale on every slide (demand: share of total demand, 0 to 70%; share of voice: 0 to 12%), so a small bar means a small value. Demand includes brand-name searches. Rank is among the top 20 domains per topic.</div>'+reco(RECO_TBD)
 
 def bench(s):
     st=s["stage"]; ts=STAGE_TOPICS[st]
@@ -217,16 +258,17 @@ def summary():
 
 FUNNEL_OF={t:f for f,ts in STAGE_TOPICS.items() for t in ts}
 
+TOTAL=sum(len(p['slides']) for p in outline['parts'])
 parts_html, pills = "", ""
 for p in outline["parts"]:
     pills += f'<button class="pill" data-p="{p["id"]}" title="{esc(p["label"])}">{p["id"]:02d}</button>'
     subs = []
     if p["phrase"]:
-        subs.append(("Introduction", f'<div class="divider"><div class="sl">Part {p["id"]:02d}</div><h2>{esc(p["label"])}</h2><p>{esc(p["phrase"])}</p></div>'))
+        subs.append((f"Part {p['id']:02d} · {p['label']}", f'<div class="divider"><div class="sl">Part {p["id"]:02d}</div><h2>{esc(p["label"])}</h2><p>{esc(p["phrase"])}</p></div>'))
     for s in p["slides"]:
-        s["part"] = f'{p["id"]:02d} · {p["label"]}'
+        s["part"] = f'{p["id"]:02d} · {p["label"]}'; CUR[0] = s["part"]
         body = {"cover": cover, "method": method, "treemap": treemap, "sov": sov, "season": season, "ai_global": ai_global, "sentiment": sentiment, "summary": summary, "stage_seo": lambda: stage_seo(s), "bench": lambda: bench(s), "ai_stage": lambda: ai_stage(s)}.get(s["tpl"], lambda: todo(s))()
-        subs.append((f'{s["n"]}. {s["name"]}', f'<div class="slide-in">{body}</div>'))
+        subs.append((f'Slide {s["n"]} of {TOTAL} · {s["name"]}', f'<div class="slide-in">{body}</div>'))
     sl = "".join(f'<section class="ss" data-name="{esc(n)}">{b}</section>' for n, b in subs)
     parts_html += f'<div class="part" data-p="{p["id"]}"><div class="track">{sl}</div></div>'
 

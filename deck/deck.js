@@ -6,7 +6,7 @@ function show(p,s){P=Math.max(0,Math.min(parts.length-1,p));S=Math.max(0,Math.mi
  subs(P).forEach((x,i)=>x.classList.toggle('on',i===S));subs(P)[S].scrollTop=0;
  pills.forEach((x,i)=>{x.classList.toggle('on',i===P);x.classList.toggle('seen',seen.has(i)&&i!==P)});
  const n=subs(P).length;document.getElementById('dots').innerHTML=subs(P).map((_,i)=>`<i class="${i===S?'on':''}" data-i="${i}"></i>`).join('');
- document.getElementById('lab').textContent=`${subs(P)[S].dataset.name} · ${S+1} / ${n}`;
+ document.getElementById('lab').textContent=subs(P)[S].dataset.name;
  document.getElementById('prevP').disabled=P===0;document.getElementById('nextP').disabled=P===parts.length-1;
  location.hash=`p${P}-s${S}`}
 function next(){S<subs(P).length-1?show(P,S+1):P<parts.length-1&&show(P+1,0)}
@@ -18,3 +18,5 @@ document.getElementById('dots').onclick=e=>{if(e.target.dataset.i)show(P,+e.targ
 document.onkeydown=e=>{if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();next()}else if(e.key==='ArrowLeft')prev();
  else if(e.key==='f')document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()};
 const m=location.hash.match(/p(\d+)-s(\d+)/);m?show(+m[1],+m[2]):show(0,0);
+
+document.addEventListener('click',e=>{const b=e.target.closest('.tg');if(!b)return;const box=b.closest('.vis');box.querySelectorAll('.tg').forEach(x=>x.classList.toggle('on',x===b));const m=b.dataset.mode;box.querySelectorAll('.brow[data-modes]').forEach(r=>{const d=JSON.parse(r.dataset.modes)[m];r.querySelector('i').style.width=d[0]+'%';r.querySelector('.bv').textContent=d[1];});});

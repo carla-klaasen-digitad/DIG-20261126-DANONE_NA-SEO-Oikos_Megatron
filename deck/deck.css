@@ -39,3 +39,10 @@ main{position:fixed;top:96px;bottom:48px;left:0;right:0}.part{display:none;heigh
 .heat{width:100%;border-collapse:collapse;font-size:11px;text-align:center}.heat th{font-weight:700;padding:4px 6px;text-align:left}.heat td{padding:6px 2px;border:2px solid #fff}.heat td.peak{outline:2px solid var(--dark);outline-offset:-2px;font-weight:800}
 .tbl{width:100%;border-collapse:collapse;font-size:12px}.tbl th{text-align:left;font-size:11px;color:var(--muted);text-transform:uppercase;padding:6px 8px;border-bottom:2px solid #eee}.tbl td,.tbl th{padding:6px 8px}.tbl td{border-bottom:1px solid #eee}.tbl td.b{font-weight:700;color:var(--brand)}.tbl td.tbd{color:var(--muted);font-style:italic}
 .ph.small{min-height:0;padding:10px 14px;margin-top:10px;font-size:12px;border-width:1px}
+.sovt{width:100%;border-collapse:collapse;font-size:12px}.sovt th{text-align:left;font-size:11px;color:var(--muted);text-transform:uppercase;padding:6px 8px;border-bottom:2px solid #eee}.sovt td.c{padding:5px 8px;width:21%}.sovt th.t{font-weight:600;text-transform:none;color:var(--text);font-size:12px;padding-left:18px}
+.sovt tr.stg th,.sovt tr.stg td{background:var(--brand-tint);font-weight:800}.sovt tr.stg th{color:var(--brand)}.sovt tr.stg small{font-weight:400;color:var(--muted);text-transform:none}
+.mb{background:var(--surface);height:9px;border-radius:99px;overflow:hidden;margin-bottom:2px}.mb i{display:block;height:100%;background:var(--brand);border-radius:99px}.dash{color:var(--muted);font-size:11px;font-style:italic}
+.heat tr.stg th{background:var(--brand-tint);color:var(--brand);text-transform:uppercase;font-size:10px}
+.stgh{font-size:10px;font-weight:800;color:var(--brand);text-transform:uppercase;margin:10px 0 2px;letter-spacing:.06em}
+.toggle{display:flex;gap:6px;margin-bottom:8px}.tg{border:0;background:var(--surface);color:var(--muted);font:600 11px Poppins;padding:4px 12px;border-radius:99px;cursor:pointer}.tg.on{background:var(--brand);color:#fff}
+.brow.axis{margin:0}.ax{display:flex;justify-content:space-between;font-size:10px;color:var(--muted);border-top:1px solid #ddd}

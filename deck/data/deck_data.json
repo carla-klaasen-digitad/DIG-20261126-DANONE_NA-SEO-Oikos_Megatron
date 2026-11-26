@@ -103,7 +103,8 @@
     "fairlife": null,
     "Premier Protein": {
      "sov": 4.15,
-     "rank": 5
+     "rank": 5,
+     "traffic": 4175.58
     }
    }
   },
@@ -208,11 +209,13 @@
    "competitors": {
     "Chobani": {
      "sov": 4.27,
-     "rank": 5
+     "rank": 5,
+     "traffic": 1301.25
     },
     "fairlife": {
      "sov": 10.26,
-     "rank": 3
+     "rank": 3,
+     "traffic": 3126.61
     },
     "Premier Protein": null
    }
@@ -266,12 +269,14 @@
    "competitors": {
     "Chobani": {
      "sov": 10.59,
-     "rank": 2
+     "rank": 2,
+     "traffic": 8770.47
     },
     "fairlife": null,
     "Premier Protein": {
      "sov": 2.79,
-     "rank": 9
+     "rank": 9,
+     "traffic": 2308.58
     }
    }
   },
@@ -324,15 +329,18 @@
    "competitors": {
     "Chobani": {
      "sov": 3.07,
-     "rank": 7
+     "rank": 7,
+     "traffic": 34916.76
     },
     "fairlife": {
      "sov": 3.4,
-     "rank": 6
+     "rank": 6,
+     "traffic": 38638.45
     },
     "Premier Protein": {
      "sov": 2.99,
-     "rank": 9
+     "rank": 9,
+     "traffic": 33961.87
     }
    }
   },
@@ -385,15 +393,18 @@
    "competitors": {
     "Chobani": {
      "sov": 1.66,
-     "rank": 14
+     "rank": 14,
+     "traffic": 1016.06
     },
     "fairlife": {
      "sov": 1.15,
-     "rank": 20
+     "rank": 20,
+     "traffic": 704.81
     },
     "Premier Protein": {
      "sov": 3.44,
-     "rank": 6
+     "rank": 6,
+     "traffic": 2102.65
     }
    }
   },
@@ -447,11 +458,13 @@
     "Chobani": null,
     "fairlife": {
      "sov": 1.5,
-     "rank": 13
+     "rank": 13,
+     "traffic": 7957.45
     },
     "Premier Protein": {
      "sov": 16.72,
-     "rank": 2
+     "rank": 2,
+     "traffic": 88783.98
     }
    }
   },
@@ -506,7 +519,8 @@
     "fairlife": null,
     "Premier Protein": {
      "sov": 1.44,
-     "rank": 12
+     "rank": 12,
+     "traffic": 768.14
     }
    }
   }

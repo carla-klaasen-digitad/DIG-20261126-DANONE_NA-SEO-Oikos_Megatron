@@ -62,7 +62,7 @@ for t in TOPICS:
     comps={}
     for name,dom in COMP.items():
         m=[x for x in doms if dom in x['domain']]
-        comps[name]=({"sov":m[0]['sov'],"rank":m[0]['rank']} if m else None)
+        comps[name]=({"sov":m[0]['sov'],"rank":m[0]['rank'],"traffic":m[0]['traffic']} if m else None)
     seo[t]={"total_traffic":total_traffic,"topic":t,"funnel":FUNNEL[t],"n_domains":len(doms),"top5":doms[:5],
             "oikos":o,"oikos_traffic_keywords":round(tot),"oikos_triplezero_traffic":round(tz),"oikos_brand_kw_traffic":round(br),
             "competitors":comps}
