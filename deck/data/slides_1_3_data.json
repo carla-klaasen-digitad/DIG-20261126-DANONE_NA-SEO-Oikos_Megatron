@@ -1,0 +1,62 @@
+{
+ "keywords_total": 5838,
+ "keywords_unique": 5298,
+ "prompts_total": 1425,
+ "total_volume": 8542660,
+ "topics": [
+  {
+   "funnel": "Buy",
+   "topic": "Product",
+   "keywords": 892,
+   "volume": 5445654
+  },
+  {
+   "funnel": "Discover",
+   "topic": "Moment",
+   "keywords": 509,
+   "volume": 565521
+  },
+  {
+   "funnel": "Buy",
+   "topic": "Purchase",
+   "keywords": 586,
+   "volume": 179871
+  },
+  {
+   "funnel": "Buy",
+   "topic": "Flavor",
+   "keywords": 743,
+   "volume": 228779
+  },
+  {
+   "funnel": "Evaluate",
+   "topic": "Ingredient",
+   "keywords": 520,
+   "volume": 637340
+  },
+  {
+   "funnel": "Discover",
+   "topic": "Health",
+   "keywords": 920,
+   "volume": 797693
+  },
+  {
+   "funnel": "Discover",
+   "topic": "Recipe",
+   "keywords": 293,
+   "volume": 344894
+  },
+  {
+   "funnel": "Evaluate",
+   "topic": "Testimonial",
+   "keywords": 691,
+   "volume": 299693
+  },
+  {
+   "funnel": "Buy",
+   "topic": "Packaging",
+   "keywords": 144,
+   "volume": 43216
+  }
+ ]
+}
