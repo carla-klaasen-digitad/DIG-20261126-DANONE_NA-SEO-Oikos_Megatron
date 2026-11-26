@@ -1,0 +1,1846 @@
+{
+ "seo": {
+  "Moment": {
+   "total_traffic": 403826.57,
+   "topic": "Moment",
+   "funnel": "Discover",
+   "n_domains": 21,
+   "top5": [
+    {
+     "domain": "www.healthline.com",
+     "sov": 34.86,
+     "traffic": 140780.85,
+     "rank": 1
+    },
+    {
+     "domain": "health.clevelandclinic.org",
+     "sov": 13.79,
+     "traffic": 55705.16,
+     "rank": 2
+    },
+    {
+     "domain": "www.youtube.com",
+     "sov": 10.47,
+     "traffic": 42286.1,
+     "rank": 3
+    },
+    {
+     "domain": "www.bonappetit.com",
+     "sov": 3.69,
+     "traffic": 14915.9,
+     "rank": 4
+    },
+    {
+     "domain": "www.delish.com",
+     "sov": 3.49,
+     "traffic": 14112.61,
+     "rank": 5
+    }
+   ],
+   "oikos": {
+    "domain": "www.oikos.com",
+    "sov": 0.0,
+    "traffic": 0.0,
+    "rank": 21
+   },
+   "oikos_traffic_keywords": 0,
+   "oikos_triplezero_traffic": 0,
+   "oikos_brand_kw_traffic": 0,
+   "competitors": {
+    "Chobani": null,
+    "fairlife": null,
+    "Premier Protein": null
+   }
+  },
+  "Recipe": {
+   "total_traffic": 100551.19,
+   "topic": "Recipe",
+   "funnel": "Discover",
+   "n_domains": 21,
+   "top5": [
+    {
+     "domain": "www.youtube.com",
+     "sov": 10.41,
+     "traffic": 10470.08,
+     "rank": 1
+    },
+    {
+     "domain": "eatwithclarity.com",
+     "sov": 5.72,
+     "traffic": 5750.32,
+     "rank": 2
+    },
+    {
+     "domain": "tastesbetterfromscratch.com",
+     "sov": 4.82,
+     "traffic": 4846.72,
+     "rank": 3
+    },
+    {
+     "domain": "whatmollymade.com",
+     "sov": 4.74,
+     "traffic": 4763.5,
+     "rank": 4
+    },
+    {
+     "domain": "www.premierprotein.com",
+     "sov": 4.15,
+     "traffic": 4175.58,
+     "rank": 5
+    }
+   ],
+   "oikos": {
+    "domain": "www.oikos.com",
+    "sov": 0.46,
+    "traffic": 458.26,
+    "rank": 21
+   },
+   "oikos_traffic_keywords": 458,
+   "oikos_triplezero_traffic": 0,
+   "oikos_brand_kw_traffic": 458,
+   "competitors": {
+    "Chobani": null,
+    "fairlife": null,
+    "Premier Protein": {
+     "sov": 4.15,
+     "rank": 5
+    }
+   }
+  },
+  "Health": {
+   "total_traffic": 193802.59,
+   "topic": "Health",
+   "funnel": "Discover",
+   "n_domains": 20,
+   "top5": [
+    {
+     "domain": "hartfordhealthcare.org",
+     "sov": 11.88,
+     "traffic": 23024.64,
+     "rank": 1
+    },
+    {
+     "domain": "www.goodrx.com",
+     "sov": 10.34,
+     "traffic": 20040.12,
+     "rank": 2
+    },
+    {
+     "domain": "www.musclemilk.com",
+     "sov": 5.19,
+     "traffic": 10063.31,
+     "rank": 3
+    },
+    {
+     "domain": "www.reddit.com",
+     "sov": 5.02,
+     "traffic": 9721.25,
+     "rank": 4
+    },
+    {
+     "domain": "examine.com",
+     "sov": 4.47,
+     "traffic": 8671.19,
+     "rank": 5
+    }
+   ],
+   "oikos": {
+    "domain": "www.oikos.com",
+    "sov": 1.98,
+    "traffic": 3834.37,
+    "rank": 10
+   },
+   "oikos_traffic_keywords": 3834,
+   "oikos_triplezero_traffic": 2333,
+   "oikos_brand_kw_traffic": 3827,
+   "competitors": {
+    "Chobani": null,
+    "fairlife": null,
+    "Premier Protein": null
+   }
+  },
+  "Ingredient": {
+   "total_traffic": 30475.61,
+   "topic": "Ingredient",
+   "funnel": "Evaluate",
+   "n_domains": 20,
+   "top5": [
+    {
+     "domain": "en.wikipedia.org",
+     "sov": 19.92,
+     "traffic": 6071.89,
+     "rank": 1
+    },
+    {
+     "domain": "www.reddit.com",
+     "sov": 11.82,
+     "traffic": 3602.66,
+     "rank": 2
+    },
+    {
+     "domain": "fairlife.com",
+     "sov": 10.26,
+     "traffic": 3126.61,
+     "rank": 3
+    },
+    {
+     "domain": "www.amazon.com",
+     "sov": 4.61,
+     "traffic": 1404.45,
+     "rank": 4
+    },
+    {
+     "domain": "chobani.com",
+     "sov": 4.27,
+     "traffic": 1301.25,
+     "rank": 5
+    }
+   ],
+   "oikos": {
+    "domain": "www.oikos.com",
+    "sov": 3.38,
+    "traffic": 1030.9,
+    "rank": 7
+   },
+   "oikos_traffic_keywords": 1031,
+   "oikos_triplezero_traffic": 540,
+   "oikos_brand_kw_traffic": 1025,
+   "competitors": {
+    "Chobani": {
+     "sov": 4.27,
+     "rank": 5
+    },
+    "fairlife": {
+     "sov": 10.26,
+     "rank": 3
+    },
+    "Premier Protein": null
+   }
+  },
+  "Testimonial": {
+   "total_traffic": 82783.93,
+   "topic": "Testimonial",
+   "funnel": "Evaluate",
+   "n_domains": 20,
+   "top5": [
+    {
+     "domain": "www.forbes.com",
+     "sov": 12.56,
+     "traffic": 10400.08,
+     "rank": 1
+    },
+    {
+     "domain": "chobani.com",
+     "sov": 10.59,
+     "traffic": 8770.47,
+     "rank": 2
+    },
+    {
+     "domain": "www.amazon.com",
+     "sov": 6.95,
+     "traffic": 5754.35,
+     "rank": 3
+    },
+    {
+     "domain": "www.eatingwell.com",
+     "sov": 6.02,
+     "traffic": 4982.37,
+     "rank": 4
+    },
+    {
+     "domain": "www.reddit.com",
+     "sov": 5.66,
+     "traffic": 4687.45,
+     "rank": 5
+    }
+   ],
+   "oikos": {
+    "domain": "www.oikos.com",
+    "sov": 1.46,
+    "traffic": 1209.51,
+    "rank": 15
+   },
+   "oikos_traffic_keywords": 1210,
+   "oikos_triplezero_traffic": 718,
+   "oikos_brand_kw_traffic": 1210,
+   "competitors": {
+    "Chobani": {
+     "sov": 10.59,
+     "rank": 2
+    },
+    "fairlife": null,
+    "Premier Protein": {
+     "sov": 2.79,
+     "rank": 9
+    }
+   }
+  },
+  "Product": {
+   "total_traffic": 1136974.82,
+   "topic": "Product",
+   "funnel": "Buy",
+   "n_domains": 20,
+   "top5": [
+    {
+     "domain": "en.wikipedia.org",
+     "sov": 11.13,
+     "traffic": 126495.69,
+     "rank": 1
+    },
+    {
+     "domain": "www.oikos.com",
+     "sov": 8.58,
+     "traffic": 97537.53,
+     "rank": 2
+    },
+    {
+     "domain": "goodculture.com",
+     "sov": 6.84,
+     "traffic": 77799.93,
+     "rank": 3
+    },
+    {
+     "domain": "www.youtube.com",
+     "sov": 4.61,
+     "traffic": 52426.26,
+     "rank": 4
+    },
+    {
+     "domain": "www.amazon.com",
+     "sov": 4.1,
+     "traffic": 46623.12,
+     "rank": 5
+    }
+   ],
+   "oikos": {
+    "domain": "www.oikos.com",
+    "sov": 8.58,
+    "traffic": 97537.53,
+    "rank": 2
+   },
+   "oikos_traffic_keywords": 97538,
+   "oikos_triplezero_traffic": 25846,
+   "oikos_brand_kw_traffic": 97366,
+   "competitors": {
+    "Chobani": {
+     "sov": 3.07,
+     "rank": 7
+    },
+    "fairlife": {
+     "sov": 3.4,
+     "rank": 6
+    },
+    "Premier Protein": {
+     "sov": 2.99,
+     "rank": 9
+    }
+   }
+  },
+  "Flavor": {
+   "total_traffic": 61168.15,
+   "topic": "Flavor",
+   "funnel": "Buy",
+   "n_domains": 20,
+   "top5": [
+    {
+     "domain": "www.oikos.com",
+     "sov": 10.2,
+     "traffic": 6236.24,
+     "rank": 1
+    },
+    {
+     "domain": "www.amazon.com",
+     "sov": 6.42,
+     "traffic": 3927.73,
+     "rank": 2
+    },
+    {
+     "domain": "www.foodfaithfitness.com",
+     "sov": 5.97,
+     "traffic": 3650.98,
+     "rank": 3
+    },
+    {
+     "domain": "www.allrecipes.com",
+     "sov": 5.02,
+     "traffic": 3070.11,
+     "rank": 4
+    },
+    {
+     "domain": "www.yoplait.com",
+     "sov": 4.77,
+     "traffic": 2917.86,
+     "rank": 5
+    }
+   ],
+   "oikos": {
+    "domain": "www.oikos.com",
+    "sov": 10.2,
+    "traffic": 6236.24,
+    "rank": 1
+   },
+   "oikos_traffic_keywords": 6236,
+   "oikos_triplezero_traffic": 3248,
+   "oikos_brand_kw_traffic": 6184,
+   "competitors": {
+    "Chobani": {
+     "sov": 1.66,
+     "rank": 14
+    },
+    "fairlife": {
+     "sov": 1.15,
+     "rank": 20
+    },
+    "Premier Protein": {
+     "sov": 3.44,
+     "rank": 6
+    }
+   }
+  },
+  "Packaging": {
+   "total_traffic": 530998.98,
+   "topic": "Packaging",
+   "funnel": "Buy",
+   "n_domains": 20,
+   "top5": [
+    {
+     "domain": "www.amazon.com",
+     "sov": 18.19,
+     "traffic": 96568.11,
+     "rank": 1
+    },
+    {
+     "domain": "www.premierprotein.com",
+     "sov": 16.72,
+     "traffic": 88783.98,
+     "rank": 2
+    },
+    {
+     "domain": "www.walmart.com",
+     "sov": 6.8,
+     "traffic": 36108.85,
+     "rank": 3
+    },
+    {
+     "domain": "www.oikos.com",
+     "sov": 6.62,
+     "traffic": 35145.97,
+     "rank": 4
+    },
+    {
+     "domain": "liveowyn.com",
+     "sov": 5.48,
+     "traffic": 29099.07,
+     "rank": 5
+    }
+   ],
+   "oikos": {
+    "domain": "www.oikos.com",
+    "sov": 6.62,
+    "traffic": 35145.97,
+    "rank": 4
+   },
+   "oikos_traffic_keywords": 35146,
+   "oikos_triplezero_traffic": 345,
+   "oikos_brand_kw_traffic": 34414,
+   "competitors": {
+    "Chobani": null,
+    "fairlife": {
+     "sov": 1.5,
+     "rank": 13
+    },
+    "Premier Protein": {
+     "sov": 16.72,
+     "rank": 2
+    }
+   }
+  },
+  "Purchase": {
+   "total_traffic": 53515.83,
+   "topic": "Purchase",
+   "funnel": "Buy",
+   "n_domains": 21,
+   "top5": [
+    {
+     "domain": "www.doordash.com",
+     "sov": 25.47,
+     "traffic": 13629.69,
+     "rank": 1
+    },
+    {
+     "domain": "www.yelp.com",
+     "sov": 18.4,
+     "traffic": 9847.06,
+     "rank": 2
+    },
+    {
+     "domain": "www.walmart.com",
+     "sov": 13.92,
+     "traffic": 7447.31,
+     "rank": 3
+    },
+    {
+     "domain": "rockinprotein.com",
+     "sov": 6.85,
+     "traffic": 3664.52,
+     "rank": 4
+    },
+    {
+     "domain": "www.aldi.us",
+     "sov": 6.84,
+     "traffic": 3662.38,
+     "rank": 5
+    }
+   ],
+   "oikos": {
+    "domain": "www.oikos.com",
+    "sov": 0.16,
+    "traffic": 84.65,
+    "rank": 21
+   },
+   "oikos_traffic_keywords": 85,
+   "oikos_triplezero_traffic": 0,
+   "oikos_brand_kw_traffic": 85,
+   "competitors": {
+    "Chobani": null,
+    "fairlife": null,
+    "Premier Protein": {
+     "sov": 1.44,
+     "rank": 12
+    }
+   }
+  }
+ },
+ "season": {
+  "Moment": {
+   "index": [
+    1.36,
+    1.09,
+    1.19,
+    1.07,
+    0.98,
+    0.99,
+    0.99,
+    1.02,
+    1.0,
+    0.93,
+    0.72,
+    0.68
+   ],
+   "peak": "Jan"
+  },
+  "Recipe": {
+   "index": [
+    1.28,
+    1.06,
+    1.2,
+    1.07,
+    0.99,
+    1.05,
+    1.09,
+    1.09,
+    0.93,
+    0.89,
+    0.71,
+    0.64
+   ],
+   "peak": "Jan"
+  },
+  "Health": {
+   "index": [
+    1.22,
+    1.05,
+    1.19,
+    1.1,
+    1.05,
+    1.04,
+    1.07,
+    1.04,
+    0.93,
+    0.87,
+    0.73,
+    0.72
+   ],
+   "peak": "Jan"
+  },
+  "Ingredient": {
+   "index": [
+    1.14,
+    0.97,
+    1.08,
+    0.97,
+    1.12,
+    1.09,
+    1.07,
+    1.05,
+    1.14,
+    1.03,
+    0.68,
+    0.67
+   ],
+   "peak": "Jan"
+  },
+  "Testimonial": {
+   "index": [
+    1.31,
+    1.05,
+    1.16,
+    1.1,
+    1.02,
+    1.03,
+    1.08,
+    1.04,
+    0.92,
+    0.88,
+    0.7,
+    0.71
+   ],
+   "peak": "Jan"
+  },
+  "Product": {
+   "index": [
+    1.05,
+    0.98,
+    1.07,
+    1.08,
+    1.03,
+    0.98,
+    1.04,
+    1.07,
+    1.01,
+    1.1,
+    0.81,
+    0.78
+   ],
+   "peak": "Oct"
+  },
+  "Flavor": {
+   "index": [
+    1.07,
+    0.97,
+    1.15,
+    1.05,
+    1.09,
+    1.08,
+    1.18,
+    1.11,
+    1.0,
+    0.93,
+    0.7,
+    0.67
+   ],
+   "peak": "Jul"
+  },
+  "Packaging": {
+   "index": [
+    1.12,
+    1.03,
+    1.03,
+    0.99,
+    0.95,
+    1.12,
+    1.04,
+    1.12,
+    1.02,
+    0.99,
+    0.76,
+    0.85
+   ],
+   "peak": "Jan"
+  },
+  "Purchase": {
+   "index": [
+    1.03,
+    0.92,
+    1.11,
+    1.03,
+    1.05,
+    1.15,
+    1.23,
+    1.14,
+    1.0,
+    1.05,
+    0.67,
+    0.63
+   ],
+   "peak": "Jul"
+  }
+ },
+ "season_cols": [
+  "Nov 2022",
+  "Dec 2022"
+ ],
+ "ai": {
+  "Moment": {
+   "topic": "Moment",
+   "funnel": "Discover",
+   "n": 11,
+   "branded": 0,
+   "avg_visibility": 21.5,
+   "zero": 3,
+   "avg_sentiment": 22.5,
+   "avg_position": 5.2,
+   "mentions": {
+    "Oikos pro": 8,
+    "Chobani": 4,
+    "Fairlife": 4,
+    "Orgain": 1,
+    "Nurri": 1
+   },
+   "prompts": [
+    {
+     "prompt": "Which high protein yogurt is best as a pre workout snack?",
+     "visibility": 66.0,
+     "sov": "15%",
+     "position": "3",
+     "sentiment": 81.0,
+     "mentions": "Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "What are good high protein yogurt options for breakfast?",
+     "visibility": 54.0,
+     "sov": "7%",
+     "position": "3.3",
+     "sentiment": 40.0,
+     "mentions": "Chobani,Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which high protein yogurt is best to eat after a workout?",
+     "visibility": 44.0,
+     "sov": "11%",
+     "position": "4.8",
+     "sentiment": 77.0,
+     "mentions": "Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "What is a good high protein breakfast with no cooking?",
+     "visibility": 25.0,
+     "sov": "7%",
+     "position": "1",
+     "sentiment": 0.0,
+     "mentions": "Chobani,Oikos pro,Fairlife",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which high protein yogurt is best to eat before bed?",
+     "visibility": 25.0,
+     "sov": "7%",
+     "position": "6.3",
+     "sentiment": 50.0,
+     "mentions": "Chobani,Fairlife,Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "What are good protein shakes for breakfast on the go?",
+     "visibility": 12.0,
+     "sov": "2%",
+     "position": "3",
+     "sentiment": 0.0,
+     "mentions": "Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "What are the best high protein snacks to keep on hand?",
+     "visibility": 6.0,
+     "sov": "4%",
+     "position": "13",
+     "sentiment": 0.0,
+     "mentions": "Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "What is a high protein sweet snack for when I crave dessert?",
+     "visibility": 4.0,
+     "sov": "4%",
+     "position": "7",
+     "sentiment": 0.0,
+     "mentions": "Fairlife,Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "Is it better to drink a protein shake before or after a workout?",
+     "visibility": 0.0,
+     "sov": "0%",
+     "position": "0",
+     "sentiment": 0.0,
+     "mentions": "",
+     "branded": "no"
+    },
+    {
+     "prompt": "What protein drinks do athletes commonly use?",
+     "visibility": 0.0,
+     "sov": "0%",
+     "position": "0",
+     "sentiment": 0.0,
+     "mentions": "Orgain,Nurri",
+     "branded": "no"
+    },
+    {
+     "prompt": "What should I eat for breakfast to get 30g of protein?",
+     "visibility": 0.0,
+     "sov": "0%",
+     "position": "0",
+     "sentiment": 0.0,
+     "mentions": "Fairlife,Chobani",
+     "branded": "no"
+    }
+   ]
+  },
+  "Recipe": {
+   "topic": "Recipe",
+   "funnel": "Discover",
+   "n": 9,
+   "branded": 1,
+   "avg_visibility": 19.6,
+   "zero": 6,
+   "avg_sentiment": 10.0,
+   "avg_position": 3.2,
+   "mentions": {
+    "Oikos pro": 3,
+    "Fairlife": 4,
+    "Chobani": 3,
+    "Orgain": 1
+   },
+   "prompts": [
+    {
+     "prompt": "Can Oikos Pro plain replace sour cream in recipes?",
+     "visibility": 92.0,
+     "sov": "75%",
+     "position": "1.2",
+     "sentiment": 33.0,
+     "mentions": "Oikos pro",
+     "branded": "yes"
+    },
+    {
+     "prompt": "How can I use protein yogurt in overnight oats?",
+     "visibility": 50.0,
+     "sov": "21%",
+     "position": "1",
+     "sentiment": 0.0,
+     "mentions": "Oikos pro,Fairlife",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which high protein yogurt is best for smoothie bowls?",
+     "visibility": 34.0,
+     "sov": "10%",
+     "position": "7.3",
+     "sentiment": 57.0,
+     "mentions": "Chobani,Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which high protein yogurt works best for baking?",
+     "visibility": 0.0,
+     "sov": "0%",
+     "position": "0",
+     "sentiment": 0.0,
+     "mentions": "Chobani",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which protein shake works best in coffee?",
+     "visibility": 0.0,
+     "sov": "0%",
+     "position": "0",
+     "sentiment": 0.0,
+     "mentions": "Fairlife,Orgain",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which high protein yogurt is best as a sour cream substitute?",
+     "visibility": 0.0,
+     "sov": "0%",
+     "position": "0",
+     "sentiment": 0.0,
+     "mentions": "Chobani",
+     "branded": "no"
+    },
+    {
+     "prompt": "How do I make a high protein smoothie with yogurt?",
+     "visibility": 0.0,
+     "sov": "0%",
+     "position": "0",
+     "sentiment": 0.0,
+     "mentions": "Fairlife",
+     "branded": "no"
+    },
+    {
+     "prompt": "How can I add protein to my smoothie without protein powder?",
+     "visibility": 0.0,
+     "sov": "0%",
+     "position": "0",
+     "sentiment": 0.0,
+     "mentions": "Fairlife",
+     "branded": "no"
+    },
+    {
+     "prompt": "How do I make a high protein parfait?",
+     "visibility": 0.0,
+     "sov": "0%",
+     "position": "0",
+     "sentiment": 0.0,
+     "mentions": "",
+     "branded": "no"
+    }
+   ]
+  },
+  "Health": {
+   "topic": "Health",
+   "funnel": "Discover",
+   "n": 12,
+   "branded": 3,
+   "avg_visibility": 20.3,
+   "zero": 7,
+   "avg_sentiment": 9.1,
+   "avg_position": 4.1,
+   "mentions": {
+    "Oikos pro": 5,
+    "Chobani": 5
+   },
+   "prompts": [
+    {
+     "prompt": "Is Oikos Pro healthy?",
+     "visibility": 100.0,
+     "sov": "46%",
+     "position": "1",
+     "sentiment": 48.0,
+     "mentions": "Oikos pro,Chobani",
+     "branded": "yes"
+    },
+    {
+     "prompt": "How much more protein does Oikos Pro have than regular yogurt?",
+     "visibility": 100.0,
+     "sov": "50%",
+     "position": "1",
+     "sentiment": 36.0,
+     "mentions": "Oikos pro,Chobani",
+     "branded": "yes"
+    },
+    {
+     "prompt": "How much protein is in a typical serving of yogurt?",
+     "visibility": 19.0,
+     "sov": "9%",
+     "position": "6",
+     "sentiment": 0.0,
+     "mentions": "Chobani,Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which yogurts are both low in calories and high in protein?",
+     "visibility": 17.0,
+     "sov": "4%",
+     "position": "10.7",
+     "sentiment": 25.0,
+     "mentions": "Chobani,Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "Is Oikos protein shake healthy?",
+     "visibility": 8.0,
+     "sov": "8%",
+     "position": "2",
+     "sentiment": 0.0,
+     "mentions": "Oikos pro",
+     "branded": "yes"
+    },
+    {
+     "prompt": "Which yogurts contain live probiotics and how do I choose one?",
+     "visibility": 0.0,
+     "sov": "0%",
+     "position": "0",
+     "sentiment": 0.0,
+     "mentions": "Chobani",
+     "branded": "no"
+    },
+    {
+     "prompt": "How does protein intake help increase muscle mass?",
+     "visibility": 0.0,
+     "sov": "0%",
+     "position": "0",
+     "sentiment": 0.0,
+     "mentions": "",
+     "branded": "no"
+    },
+    {
+     "prompt": "How much protein do I need to support muscle gain?",
+     "visibility": 0.0,
+     "sov": "0%",
+     "position": "0",
+     "sentiment": 0.0,
+     "mentions": "",
+     "branded": "no"
+    },
+    {
+     "prompt": "What are some high protein foods that are also low in calories?",
+     "visibility": 0.0,
+     "sov": "0%",
+     "position": "0",
+     "sentiment": 0.0,
+     "mentions": "",
+     "branded": "no"
+    },
+    {
+     "prompt": "How much protein do I need in a day?",
+     "visibility": 0.0,
+     "sov": "0%",
+     "position": "0",
+     "sentiment": 0.0,
+     "mentions": "",
+     "branded": "no"
+    },
+    {
+     "prompt": "Are protein shakes a good way to support muscle gain?",
+     "visibility": 0.0,
+     "sov": "0%",
+     "position": "0",
+     "sentiment": 0.0,
+     "mentions": "",
+     "branded": "no"
+    },
+    {
+     "prompt": "What should I look for in a muscle building protein shake?",
+     "visibility": 0.0,
+     "sov": "0%",
+     "position": "0",
+     "sentiment": 0.0,
+     "mentions": "",
+     "branded": "no"
+    }
+   ]
+  },
+  "Ingredient": {
+   "topic": "Ingredient",
+   "funnel": "Evaluate",
+   "n": 11,
+   "branded": 3,
+   "avg_visibility": 51.5,
+   "zero": 1,
+   "avg_sentiment": 7.5,
+   "avg_position": 5.0,
+   "mentions": {
+    "Oikos pro": 10,
+    "Chobani": 7,
+    "Fairlife": 2,
+    "Orgain": 1
+   },
+   "prompts": [
+    {
+     "prompt": "Does Oikos Pro have artificial sweeteners?",
+     "visibility": 100.0,
+     "sov": "38%",
+     "position": "1",
+     "sentiment": 0.0,
+     "mentions": "Oikos pro",
+     "branded": "yes"
+    },
+    {
+     "prompt": "Does ultra-filtered milk change the taste of Oikos Pro?",
+     "visibility": 100.0,
+     "sov": "60%",
+     "position": "1",
+     "sentiment": 0.0,
+     "mentions": "Oikos pro",
+     "branded": "yes"
+    },
+    {
+     "prompt": "Does ultra-filtered milk make Oikos Pro thicker or thinner?",
+     "visibility": 100.0,
+     "sov": "55%",
+     "position": "1",
+     "sentiment": 21.0,
+     "mentions": "Oikos pro,Chobani,Fairlife",
+     "branded": "yes"
+    },
+    {
+     "prompt": "Which high protein yogurts use ultra-filtered milk?",
+     "visibility": 91.0,
+     "sov": "17%",
+     "position": "1.7",
+     "sentiment": 4.0,
+     "mentions": "Oikos pro,Fairlife,Chobani",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which high protein yogurts use stevia or monk fruit instead of sucralose?",
+     "visibility": 51.0,
+     "sov": "7%",
+     "position": "3",
+     "sentiment": 40.0,
+     "mentions": "Chobani,Oikos pro,Orgain",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which high protein yogurts have the least added sugar?",
+     "visibility": 47.0,
+     "sov": "6%",
+     "position": "9.5",
+     "sentiment": 18.0,
+     "mentions": "Chobani,Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which high protein dairy snacks use whey protein isolate?",
+     "visibility": 27.0,
+     "sov": "4%",
+     "position": "3.5",
+     "sentiment": 0.0,
+     "mentions": "Oikos pro,Chobani",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which high protein yogurts contain prebiotic fiber?",
+     "visibility": 24.0,
+     "sov": "5%",
+     "position": "4",
+     "sentiment": 0.0,
+     "mentions": "Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which high protein yogurt cups are made without artificial sweeteners?",
+     "visibility": 24.0,
+     "sov": "4%",
+     "position": "8.3",
+     "sentiment": 0.0,
+     "mentions": "Chobani,Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which high protein yogurts have the shortest ingredient lists?",
+     "visibility": 3.0,
+     "sov": "5%",
+     "position": "17",
+     "sentiment": 0.0,
+     "mentions": "Chobani,Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which protein shakes have the shortest and simplest ingredient lists?",
+     "visibility": 0.0,
+     "sov": "0%",
+     "position": "0",
+     "sentiment": 0.0,
+     "mentions": "",
+     "branded": "no"
+    }
+   ]
+  },
+  "Testimonial": {
+   "topic": "Testimonial",
+   "funnel": "Evaluate",
+   "n": 30,
+   "branded": 11,
+   "avg_visibility": 56.2,
+   "zero": 4,
+   "avg_sentiment": 22.8,
+   "avg_position": 3.8,
+   "mentions": {
+    "Oikos pro": 26,
+    "Chobani": 16,
+    "Fairlife": 5,
+    "Orgain": 2,
+    "Nurri": 1
+   },
+   "prompts": [
+    {
+     "prompt": "What do reviewers say about the Oikos Pro texture?",
+     "visibility": 100.0,
+     "sov": "43%",
+     "position": "1",
+     "sentiment": 3.0,
+     "mentions": "Oikos pro",
+     "branded": "yes"
+    },
+    {
+     "prompt": "What is the best way to describe the Oikos Pro texture to a first time buyer?",
+     "visibility": 100.0,
+     "sov": "46%",
+     "position": "1",
+     "sentiment": 61.0,
+     "mentions": "Oikos pro,Chobani",
+     "branded": "yes"
+    },
+    {
+     "prompt": "Is Oikos Pro texture grainy or gritty?",
+     "visibility": 100.0,
+     "sov": "55%",
+     "position": "1",
+     "sentiment": 0.0,
+     "mentions": "Oikos pro,Chobani",
+     "branded": "yes"
+    },
+    {
+     "prompt": "Did Oikos Pro change its texture recently?",
+     "visibility": 100.0,
+     "sov": "35%",
+     "position": "1",
+     "sentiment": -18.0,
+     "mentions": "Oikos pro",
+     "branded": "yes"
+    },
+    {
+     "prompt": "How does Oikos Pro taste cold compared with room temperature?",
+     "visibility": 100.0,
+     "sov": "67%",
+     "position": "1",
+     "sentiment": 6.0,
+     "mentions": "Oikos pro",
+     "branded": "yes"
+    },
+    {
+     "prompt": "What do reviewers say about the Oikos Pro taste?",
+     "visibility": 100.0,
+     "sov": "35%",
+     "position": "1",
+     "sentiment": 50.0,
+     "mentions": "Oikos pro",
+     "branded": "yes"
+    },
+    {
+     "prompt": "What does Oikos Pro taste like to someone who dislikes protein products?",
+     "visibility": 100.0,
+     "sov": "55%",
+     "position": "1",
+     "sentiment": 5.0,
+     "mentions": "Oikos pro,Chobani",
+     "branded": "yes"
+    },
+    {
+     "prompt": "Is Oikos Pro sweet enough without added sugar?",
+     "visibility": 100.0,
+     "sov": "55%",
+     "position": "1",
+     "sentiment": 12.0,
+     "mentions": "Oikos pro",
+     "branded": "yes"
+    },
+    {
+     "prompt": "What do people say about the Oikos Pro texture change?",
+     "visibility": 100.0,
+     "sov": "33%",
+     "position": "1",
+     "sentiment": -53.0,
+     "mentions": "Oikos pro,Chobani",
+     "branded": "yes"
+    },
+    {
+     "prompt": "Has the taste of Oikos Pro changed over time?",
+     "visibility": 88.0,
+     "sov": "38%",
+     "position": "1.8",
+     "sentiment": -33.0,
+     "mentions": "Oikos pro",
+     "branded": "yes"
+    },
+    {
+     "prompt": "Did Oikos Pro change their recipe?",
+     "visibility": 87.0,
+     "sov": "29%",
+     "position": "2.3",
+     "sentiment": -35.0,
+     "mentions": "Oikos pro",
+     "branded": "yes"
+    },
+    {
+     "prompt": "Which high protein yogurts are the least grainy?",
+     "visibility": 74.0,
+     "sov": "11%",
+     "position": "4",
+     "sentiment": 77.0,
+     "mentions": "Chobani,Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which protein yogurts separate the least in the cup?",
+     "visibility": 62.0,
+     "sov": "9%",
+     "position": "4.2",
+     "sentiment": 27.0,
+     "mentions": "Chobani,Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which high protein yogurts stay smooth when you stir them?",
+     "visibility": 59.0,
+     "sov": "10%",
+     "position": "4",
+     "sentiment": 50.0,
+     "mentions": "Chobani,Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which high protein yogurt cups have the best texture?",
+     "visibility": 58.0,
+     "sov": "9%",
+     "position": "4",
+     "sentiment": 85.0,
+     "mentions": "Chobani,Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which ultra-filtered yogurts have the smoothest texture?",
+     "visibility": 49.0,
+     "sov": "11%",
+     "position": "3.5",
+     "sentiment": 57.0,
+     "mentions": "Fairlife,Oikos pro,Chobani",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which high protein yogurts taste the best without any added sugar?",
+     "visibility": 41.0,
+     "sov": "7%",
+     "position": "7.3",
+     "sentiment": 62.0,
+     "mentions": "Chobani,Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which high protein yogurts are thick and creamy rather than thin and watery?",
+     "visibility": 40.0,
+     "sov": "8%",
+     "position": "5.8",
+     "sentiment": 28.0,
+     "mentions": "Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which high protein yogurts taste better than regular yogurt?",
+     "visibility": 38.0,
+     "sov": "9%",
+     "position": "7.3",
+     "sentiment": 75.0,
+     "mentions": "Chobani,Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which high protein yogurts are the least sour or tart?",
+     "visibility": 35.0,
+     "sov": "6%",
+     "position": "5.3",
+     "sentiment": 66.0,
+     "mentions": "Chobani,Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which high protein yogurts are the thickest and which are the thinnest?",
+     "visibility": 34.0,
+     "sov": "3%",
+     "position": "10.7",
+     "sentiment": 18.0,
+     "mentions": "Chobani,Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which zero added sugar high protein yogurts taste closest to regular sweetened yogurt?",
+     "visibility": 31.0,
+     "sov": "8%",
+     "position": "6",
+     "sentiment": 66.0,
+     "mentions": "Chobani,Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which high protein yogurts taste the least chalky?",
+     "visibility": 30.0,
+     "sov": "8%",
+     "position": "8.8",
+     "sentiment": 50.0,
+     "mentions": "Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which high protein yogurts taste the least like protein powder?",
+     "visibility": 25.0,
+     "sov": "9%",
+     "position": "8.8",
+     "sentiment": -25.0,
+     "mentions": "Chobani,Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which zero added sugar yogurts have the least aftertaste?",
+     "visibility": 17.0,
+     "sov": "3%",
+     "position": "1",
+     "sentiment": 50.0,
+     "mentions": "Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which high protein yogurts are creamy without added thickeners?",
+     "visibility": 17.0,
+     "sov": "4%",
+     "position": "5.5",
+     "sentiment": 0.0,
+     "mentions": "Oikos pro,Chobani",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which ready to drink protein shakes are thick and creamy rather than thin or watery?",
+     "visibility": 0.0,
+     "sov": "0%",
+     "position": "0",
+     "sentiment": 0.0,
+     "mentions": "Fairlife",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which protein shakes are the least watery?",
+     "visibility": 0.0,
+     "sov": "0%",
+     "position": "0",
+     "sentiment": 0.0,
+     "mentions": "Fairlife,Orgain,Nurri",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which protein shakes taste the least artificial?",
+     "visibility": 0.0,
+     "sov": "0%",
+     "position": "0",
+     "sentiment": 0.0,
+     "mentions": "Fairlife,Orgain",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which protein shakes taste the least bitter?",
+     "visibility": 0.0,
+     "sov": "0%",
+     "position": "0",
+     "sentiment": 0.0,
+     "mentions": "Fairlife",
+     "branded": "no"
+    }
+   ]
+  },
+  "Product": {
+   "topic": "Product",
+   "funnel": "Buy",
+   "n": 12,
+   "branded": 4,
+   "avg_visibility": 40.7,
+   "zero": 4,
+   "avg_sentiment": 10.5,
+   "avg_position": 4.0,
+   "mentions": {
+    "Oikos pro": 8,
+    "Chobani": 4,
+    "Fairlife": 6,
+    "Nurri": 2,
+    "Orgain": 1
+   },
+   "prompts": [
+    {
+     "prompt": "What is Oikos Pro?",
+     "visibility": 100.0,
+     "sov": "21%",
+     "position": "1",
+     "sentiment": 0.0,
+     "mentions": "Oikos pro,Chobani",
+     "branded": "yes"
+    },
+    {
+     "prompt": "What is the Oikos Pro yogurt?",
+     "visibility": 100.0,
+     "sov": "27%",
+     "position": "1",
+     "sentiment": 15.0,
+     "mentions": "Oikos pro",
+     "branded": "yes"
+    },
+    {
+     "prompt": "What is the most popular high protein yogurt in the United States?",
+     "visibility": 68.0,
+     "sov": "10%",
+     "position": "5.7",
+     "sentiment": 45.0,
+     "mentions": "Chobani,Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "What is the Oikos Pro drink?",
+     "visibility": 67.0,
+     "sov": "15%",
+     "position": "1",
+     "sentiment": 0.0,
+     "mentions": "Oikos pro",
+     "branded": "yes"
+    },
+    {
+     "prompt": "How do the main high protein yogurt brands compare on thickness?",
+     "visibility": 59.0,
+     "sov": "9%",
+     "position": "7.7",
+     "sentiment": 0.0,
+     "mentions": "Oikos pro,Chobani",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which high protein yogurts taste the most like regular yogurt?",
+     "visibility": 36.0,
+     "sov": "8%",
+     "position": "6",
+     "sentiment": 66.0,
+     "mentions": "Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "What are the best ultra-filtered high protein snacks?",
+     "visibility": 36.0,
+     "sov": "5%",
+     "position": "7",
+     "sentiment": 0.0,
+     "mentions": "Fairlife,Nurri,Chobani,Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "What is the Oikos protein shake?",
+     "visibility": 22.0,
+     "sov": "11%",
+     "position": "2.5",
+     "sentiment": 0.0,
+     "mentions": "Oikos pro,Fairlife",
+     "branded": "yes"
+    },
+    {
+     "prompt": "Which protein shakes have the best texture?",
+     "visibility": 0.0,
+     "sov": "0%",
+     "position": "0",
+     "sentiment": 0.0,
+     "mentions": "Fairlife,Nurri",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which protein shakes are the creamiest?",
+     "visibility": 0.0,
+     "sov": "0%",
+     "position": "0",
+     "sentiment": 0.0,
+     "mentions": "Fairlife",
+     "branded": "no"
+    },
+    {
+     "prompt": "What is the most popular ready to drink protein shake in the United States?",
+     "visibility": 0.0,
+     "sov": "0%",
+     "position": "0",
+     "sentiment": 0.0,
+     "mentions": "Fairlife,Orgain",
+     "branded": "no"
+    },
+    {
+     "prompt": "What should I look for when buying a protein shake?",
+     "visibility": 0.0,
+     "sov": "0%",
+     "position": "0",
+     "sentiment": 0.0,
+     "mentions": "Fairlife",
+     "branded": "no"
+    }
+   ]
+  },
+  "Flavor": {
+   "topic": "Flavor",
+   "funnel": "Buy",
+   "n": 11,
+   "branded": 5,
+   "avg_visibility": 36.1,
+   "zero": 2,
+   "avg_sentiment": 6.5,
+   "avg_position": 2.5,
+   "mentions": {
+    "Oikos pro": 9,
+    "Chobani": 6,
+    "Fairlife": 5,
+    "Orgain": 1
+   },
+   "prompts": [
+    {
+     "prompt": "What does Oikos Pro strawberry banana taste like?",
+     "visibility": 100.0,
+     "sov": "56%",
+     "position": "1",
+     "sentiment": 42.0,
+     "mentions": "Oikos pro,Chobani",
+     "branded": "yes"
+    },
+    {
+     "prompt": "What does Oikos Pro vanilla taste like?",
+     "visibility": 67.0,
+     "sov": "31%",
+     "position": "2.8",
+     "sentiment": 16.0,
+     "mentions": "Oikos pro,Chobani",
+     "branded": "yes"
+    },
+    {
+     "prompt": "Which flavors of high protein yogurt are the most popular?",
+     "visibility": 54.0,
+     "sov": "5%",
+     "position": "2.7",
+     "sentiment": 33.0,
+     "mentions": "Chobani,Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which high protein yogurt flavors get the most complaints?",
+     "visibility": 50.0,
+     "sov": "12%",
+     "position": "2.3",
+     "sentiment": -66.0,
+     "mentions": "Oikos pro,Fairlife",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which high protein yogurt flavors have the best reviews?",
+     "visibility": 43.0,
+     "sov": "7%",
+     "position": "4",
+     "sentiment": 80.0,
+     "mentions": "Chobani,Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "What does Oikos Pro strawberry taste like?",
+     "visibility": 42.0,
+     "sov": "23%",
+     "position": "1.3",
+     "sentiment": -33.0,
+     "mentions": "Oikos pro,Chobani",
+     "branded": "yes"
+    },
+    {
+     "prompt": "What does the Oikos chocolate protein shake taste like?",
+     "visibility": 17.0,
+     "sov": "6%",
+     "position": "1",
+     "sentiment": 100.0,
+     "mentions": "Oikos pro,Fairlife",
+     "branded": "yes"
+    },
+    {
+     "prompt": "What does the Oikos vanilla protein shake taste like?",
+     "visibility": 13.0,
+     "sov": "6%",
+     "position": "2",
+     "sentiment": 0.0,
+     "mentions": "Oikos pro,Fairlife,Chobani",
+     "branded": "yes"
+    },
+    {
+     "prompt": "Which high protein yogurt has the mildest flavor, not too sour and not too sweet?",
+     "visibility": 11.0,
+     "sov": "2%",
+     "position": "5",
+     "sentiment": -100.0,
+     "mentions": "Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which protein shake flavors are the least chalky?",
+     "visibility": 0.0,
+     "sov": "0%",
+     "position": "0",
+     "sentiment": 0.0,
+     "mentions": "Orgain,Fairlife",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which protein shake flavors do people like the most?",
+     "visibility": 0.0,
+     "sov": "0%",
+     "position": "0",
+     "sentiment": 0.0,
+     "mentions": "Fairlife",
+     "branded": "no"
+    }
+   ]
+  },
+  "Packaging": {
+   "topic": "Packaging",
+   "funnel": "Buy",
+   "n": 7,
+   "branded": 1,
+   "avg_visibility": 26.6,
+   "zero": 4,
+   "avg_sentiment": 14.7,
+   "avg_position": 2.3,
+   "mentions": {
+    "Oikos pro": 3,
+    "Chobani": 4,
+    "Fairlife": 1,
+    "Orgain": 1
+   },
+   "prompts": [
+    {
+     "prompt": "Did Oikos Pro change its packaging?",
+     "visibility": 93.0,
+     "sov": "30%",
+     "position": "2.2",
+     "sentiment": 0.0,
+     "mentions": "Oikos pro",
+     "branded": "yes"
+    },
+    {
+     "prompt": "What is the best high protein yogurt shot?",
+     "visibility": 66.0,
+     "sov": "16%",
+     "position": "2.6",
+     "sentiment": 37.0,
+     "mentions": "Oikos pro,Chobani",
+     "branded": "no"
+    },
+    {
+     "prompt": "What is the best single serve high protein snack?",
+     "visibility": 27.0,
+     "sov": "6%",
+     "position": "2",
+     "sentiment": 66.0,
+     "mentions": "Chobani,Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "Are bottled protein shakes convenient compared with powders?",
+     "visibility": 0.0,
+     "sov": "0%",
+     "position": "0",
+     "sentiment": 0.0,
+     "mentions": "Fairlife,Orgain",
+     "branded": "no"
+    },
+    {
+     "prompt": "How big is a standard cup of yogurt?",
+     "visibility": 0.0,
+     "sov": "0%",
+     "position": "0",
+     "sentiment": 0.0,
+     "mentions": "Chobani",
+     "branded": "no"
+    },
+    {
+     "prompt": "What are protein shots and when do people use them?",
+     "visibility": 0.0,
+     "sov": "0%",
+     "position": "0",
+     "sentiment": 0.0,
+     "mentions": "",
+     "branded": "no"
+    },
+    {
+     "prompt": "What size container does yogurt usually come in?",
+     "visibility": 0.0,
+     "sov": "0%",
+     "position": "0",
+     "sentiment": 0.0,
+     "mentions": "Chobani",
+     "branded": "no"
+    }
+   ]
+  },
+  "Purchase": {
+   "topic": "Purchase",
+   "funnel": "Buy",
+   "n": 8,
+   "branded": 5,
+   "avg_visibility": 63.4,
+   "zero": 0,
+   "avg_sentiment": 30.1,
+   "avg_position": 5.0,
+   "mentions": {
+    "Oikos pro": 8,
+    "Chobani": 5,
+    "Fairlife": 2,
+    "Orgain": 1
+   },
+   "prompts": [
+    {
+     "prompt": "Is Oikos Pro worth the money for the protein you get?",
+     "visibility": 100.0,
+     "sov": "26%",
+     "position": "1",
+     "sentiment": 29.0,
+     "mentions": "Oikos pro,Chobani",
+     "branded": "yes"
+    },
+    {
+     "prompt": "Has Oikos Pro been affected by shrinkflation?",
+     "visibility": 100.0,
+     "sov": "24%",
+     "position": "1",
+     "sentiment": -12.0,
+     "mentions": "Oikos pro,Chobani",
+     "branded": "yes"
+    },
+    {
+     "prompt": "Is Oikos Pro worth the price?",
+     "visibility": 100.0,
+     "sov": "21%",
+     "position": "1",
+     "sentiment": 21.0,
+     "mentions": "Oikos pro,Chobani",
+     "branded": "yes"
+    },
+    {
+     "prompt": "Which high protein yogurt brands are available in most US grocery stores?",
+     "visibility": 84.0,
+     "sov": "10%",
+     "position": "3.7",
+     "sentiment": 33.0,
+     "mentions": "Chobani,Oikos pro",
+     "branded": "yes"
+    },
+    {
+     "prompt": "Which high protein yogurt cups are the best value per cup?",
+     "visibility": 59.0,
+     "sov": "11%",
+     "position": "3.4",
+     "sentiment": 70.0,
+     "mentions": "Oikos pro",
+     "branded": "no"
+    },
+    {
+     "prompt": "How much does Oikos protein shake cost?",
+     "visibility": 43.0,
+     "sov": "14%",
+     "position": "2",
+     "sentiment": 0.0,
+     "mentions": "Oikos pro",
+     "branded": "yes"
+    },
+    {
+     "prompt": "Which protein shakes are the best value per bottle?",
+     "visibility": 17.0,
+     "sov": "2%",
+     "position": "1",
+     "sentiment": 100.0,
+     "mentions": "Oikos pro,Fairlife",
+     "branded": "no"
+    },
+    {
+     "prompt": "Which protein shakes are available in most US grocery stores?",
+     "visibility": 4.0,
+     "sov": "1%",
+     "position": "27",
+     "sentiment": 0.0,
+     "mentions": "Fairlife,Chobani,Orgain,Oikos pro",
+     "branded": "no"
+    }
+   ]
+  }
+ },
+ "ai_brand_mentions": {
+  "oikos pro": 80,
+  "chobani": 54,
+  "fairlife": 29,
+  "orgain": 9,
+  "nurri": 4
+ },
+ "ai_total": 111,
+ "ai_zero": 31
+}
