@@ -1,6 +1,6 @@
 """Builds Oikos_Megatron_Deck.html from data/outline.json and data/slides_1_3_data.json.
 Only slides 1-3 carry data. Every other slide is a labelled skeleton."""
-import json, html, sys
+import json, html, sys, collections
 from pathlib import Path
 
 root = Path(__file__).parent
@@ -38,15 +38,6 @@ def cover():
 <h1>Oikos Pro</h1><p class="sub">Google and AI search · United States</p><div class="kpis">{k}</div>
 <div class="band"><b>Your question:</b> how does Oikos Pro show up in AI answers and in Google, especially when people ask about taste, texture, recipe change and price?</div>
 <div class="agenda">{"".join(f'<span>{p["id"]:02d} · {esc(p["label"])}</span>' for p in outline["parts"])}</div></div>'''
-
-def method():
-    steps = [("1", "Keyword listing and classification", f'{fmt(d["keywords_total"])} keywords, 9 topics, 3 funnel stages'),
-             ("2", "SEO matrix (SE Ranking)", "Share of voice per topic, Google USA"),
-             ("3", "AI matrix (SE Visible)", "Prompts: 70% unbranded, 30% branded"),
-             ("4", "Benchmark", "2 inspirational competitors, SEO and GEO")]
-    s = "".join(f'<div class="step"><i>{a}</i><b>{esc(b)}</b><p>{esc(c)}</p></div>' for a, b, c in steps)
-    return head("01 · Method", "How to read this study", "Four steps, one funnel, one question per slide.") + f'<div class="steps">{s}</div>' + \
-        '<div class="note">Funnel: Discover (Moment, Recipe, Health), Evaluate (Ingredients, Testimonial), Buy (Product, Flavor, Packaging, Purchase). Branded and unbranded prompts are read separately. Competitor prompts are not tracked.</div>'
 
 def treemap():
     cols = ""
@@ -198,15 +189,15 @@ def bench(s):
     def cell(o): return "not in top 20" if not o else f'{o["sov"]:.1f}% (#{o["rank"]})'
     rows=""
     for t in ts:
-        S=SEO[t]; lead=S["top5"][0]
-        rows+=f'<tr><th>{lab(t)}</th><td class="b">{sov_txt(S["oikos"]) if S["oikos"] else "0%"}</td><td>{cell(S["competitors"]["Chobani"])}</td><td>{cell(S["competitors"]["fairlife"])}</td><td>{cell(S["competitors"]["Premier Protein"])}</td><td>{esc(lead["domain"].replace("www.",""))} {lead["sov"]:.1f}%</td></tr>'
+        S=SEO[t]; top3=", ".join(f'{esc(x["domain"].replace("www.",""))} {x["sov"]:.1f}%' for x in S["top5"][:3])
+        rows+=f'<tr><th>{lab(t)}</th><td class="b">{sov_txt(S["oikos"]) if S["oikos"] else "0%"}</td><td>{cell(S["competitors"]["Chobani"])}</td><td>{cell(S["competitors"]["fairlife"])}</td><td>{cell(S["competitors"]["Premier Protein"])}</td><td>{top3}</td></tr>'
     appear=lambda c:sum(1 for t in ts if SEO[t]["competitors"][c])
     ins=[(f'{appear("Chobani")} of {len(ts)}',"topics where Chobani is in the top 20 domains","Share of voice, stale"),
          (f'{appear("fairlife")} of {len(ts)}',"topics where fairlife is in the top 20","Share of voice, stale"),
          (f'{appear("Premier Protein")} of {len(ts)}',"topics where Premier Protein is in the top 20","Share of voice, stale"),
          ("Pending","the two inspirational competitors are not chosen yet","Thomas to confirm")]
-    return head(s["part"],s["name"],f"Share of voice of Oikos and three candidate competitors in {st} topics.")+STALE+insights(ins)+\
-        f'<div class="vis"><table class="tbl"><tr><th>Topic</th><th>Oikos</th><th>Chobani</th><th>fairlife</th><th>Premier Protein</th><th>Domain ranked #1</th></tr>{rows}</table></div>'+\
+    return head(s["part"],s["name"],f"Share of voice of Oikos, three candidate competitors and the leading domains in {st} topics.")+STALE+insights(ins)+\
+        f'<div class="vis"><table class="tbl"><tr><th>Topic</th><th>Oikos</th><th>Chobani</th><th>fairlife</th><th>Premier Protein</th><th>Top 3 domains in the topic</th></tr>{rows}</table></div>'+\
         '<div class="note">Candidates only: the 2 inspirational competitors are not chosen. Share of voice (rank). Per-keyword competitor positions are not in these exports.</div>'+reco(RECO_TBD)
 
 def plist(prompts,limit=12,sort="visibility"):
@@ -252,9 +243,67 @@ def summary():
     for st,ts in STAGE_TOPICS.items():
         z,n=ai_zero(ts); sv=sum(vol[t] for t in ts); bs=max(ts,key=lambda t:(SEO[t]["oikos"]["sov"] if SEO[t]["oikos"] else 0))
         rows+=f'<tr><th>{st}</th><td>{round(100*sv/d["total_volume"])}%</td><td>{lab(bs)} {SEO[bs]["oikos"]["sov"] if SEO[bs]["oikos"] else 0}%</td><td>{ai_avg(ts):.0f}%</td><td>{z}/{n}</td><td class="tbd">[P1 / P2 / P3]</td></tr>'
-    return head("06 · Recommendations","Summary: verdict per funnel stage","[Verdict to write once all slides are reviewed]")+\
+    return head(CUR[0],"Synthesis and prioritization","[Verdict to write once all slides are reviewed]")+\
         f'<div class="vis"><table class="tbl"><tr><th>Stage</th><th>Share of demand</th><th>Best Oikos share of voice (stale)</th><th>AI visibility</th><th>Prompts at zero</th><th>Priority</th></tr>{rows}</table></div>'+\
         '<div class="note">Data columns are filled from slides 3 to 16. The priority column is intentionally blank: no recommendations or priority rule written yet.</div>'+reco(RECO_TBD)
+
+
+def method():
+    steps = [("1", "Keyword listing and classification", f'{fmt(d["keywords_total"])} keywords, 9 topics, 3 funnel stages'),
+             ("2", "SEO matrix (SE Ranking)", "Share of voice per topic, Google USA"),
+             ("3", "AI matrix (SE Visible)", "Prompts: 70% unbranded, 30% branded"),
+             ("4", "Benchmark and recommendations", "Competitors, SEO and GEO, priorities")]
+    st = "".join(f'<div class="step"><i>{a}</i><b>{esc(b)}</b><p>{esc(c)}</p></div>' for a, b, c in steps)
+    gl = [("Search volume","Average monthly Google searches, USA, last 48 months. Close variants and misspellings counted once."),
+          ("Share of voice","A domain's share of the estimated traffic in a topic's keyword set (SE Ranking). Not additive across topics."),
+          ("Visibility (AI)","Share of runs of a prompt in which Oikos is mentioned (SE Visible)."),
+          ("Net sentiment","SE Visible's sentiment score per prompt. Definition not given in the export."),
+          ("Branded / unbranded","Branded = the Oikos name or a misspelling. Unbranded = category searches and questions."),
+          ("Funnel","Discover (Moment, Recipe, Health), Evaluate (Ingredients, Testimonial), Buy (Product, Flavor, Packaging, Purchase).")]
+    g = "".join(f'<tr><th>{esc(a)}</th><td>{esc(b)}</td></tr>' for a, b in gl)
+    lim = ["SE Ranking exports are from 22 Nov 2026, from the old project (includes Triple Zero and ambiguous keywords). Re-export pending.",
+           "SE Visible: 111 prompts, one week, 7 to 30 prompts per topic. Indicative only.",
+           "Competitors shown are candidates. The 2 inspirational competitors are not chosen yet.",
+           "Competitor positions per keyword, AI cited sources and social data are not available yet."]
+    l = "".join(f"<li>{esc(x)}</li>" for x in lim)
+    return head("00 · Context and method","Method, glossary and limits","Four steps, one funnel, and clear limits on what the data can say.")+f'<div class="steps">{st}</div><div class="two"><div class="vis"><h4>Glossary</h4><table class="tbl">{g}</table></div><div class="vis"><h4>Limits</h4><ul class="lim">{l}</ul></div></div>'
+
+def brand():
+    B=D["brand"]; tv=d["total_volume"]
+    bv=sum(v["brand"] for v in B["stage"].values()); mx=max(b["vol"] for b in B["brands"])
+    rows="".join(bar(("Oikos Pro" if b["brand"]=="Oikos Pro" else b["brand"]),b["vol"],mx,f'{b["vol"]:,} / mo',"brandbar" if b["brand"].startswith("Oikos") else "slate") for b in B["brands"])
+    top="".join(f'<tr><td>{esc(x["kw"])}</td><td>{x["vol"]:,}</td></tr>' for x in B["top_branded"])
+    oi=[b["vol"] for b in B["brands"] if b["brand"]=="Oikos"][0]; pp=[b["vol"] for b in B["brands"] if b["brand"]=="Premier Protein"][0]
+    ins=[(f"{round(100*bv/tv,1)}%","of all search demand in the study carries the Oikos name (brand and misspellings)","Keyword listing, master"),
+         (f"{round(100*brand_traffic/tot_traffic)}%","of Oikos estimated Google traffic comes from those branded searches","SE Ranking, stale"),
+         (f"{oi:,}","monthly searches tagged Oikos, vs "+f"{pp:,} for Premier Protein","Keyword listing brand tag"),
+         (esc_none:=B["top_branded"][0]["kw"],f'is the largest branded query ({B["top_branded"][0]["vol"]:,}/mo)',"Keyword listing")]
+    return head(CUR[0],"The demand that carries the Oikos name",f"About {round(100*bv/tv)}% of demand names Oikos, yet almost all Oikos Google traffic comes from it.")+STALE+insights(ins)+\
+        f'<div class="two"><div class="vis"><h4>Brand-name search volume (clean brand names only)</h4>{rows}</div><div class="vis"><h4>Top 10 Oikos-name queries</h4><table class="tbl"><tr><th>Query</th><th>Volume / month</th></tr>{top}</table></div></div>'+\
+        '<div class="note">Brands whose name is also an everyday word (Quest, Ghost, Slate, Ensure, Boost, Greek Gods, Ratio) are left out because their volume is not brand demand. Tags are rule-based and not yet validated. Misspellings (okio, oiko) count as Oikos. Triple Zero queries are included in the Oikos-name volume.</div>'+reco(RECO_TBD)
+
+def stage_demand(s):
+    st=s["stage"]; ts=STAGE_TOPICS[st]; B=D["brand"]["stage"][st]
+    stv=sum(vol[t] for t in ts)
+    vrows=axis(f"{DEM_MAX}% of total demand")+"".join(bar(lab(t),100*vol[t]/d["total_volume"],DEM_MAX,f'{100*vol[t]/d["total_volume"]:.1f}% of all demand · {vol[t]:,}/mo',"slate") for t in ts)
+    MN=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+    hr="<tr><th></th>"+"".join(f"<th>{m}</th>" for m in MN)+"<th>Peak</th></tr>"; hb=""
+    for t in ts:
+        cells="".join(f'<td class="hm{" peak" if MN[k]==SEA[t]["peak"] else ""}" style="background:rgba(184,0,28,{max(0,min(1,(v-0.7)/0.8)):.2f});color:{"#fff" if (v-0.7)/0.8>.55 else "#2c2c2c"}">{v:.2f}</td>' for k,v in enumerate(SEA[t]["index"]))
+        hb+=f'<tr><th>{lab(t)}</th>{cells}<td><b>{SEA[t]["peak"]}</b></td></tr>'
+    atr=""
+    for an,vals in D["attrs"][st].items():
+        atr+=f'<tr><th>{esc(an)}</th><td>'+", ".join(f'{esc(v["v"])} <small>({v["vol"]:,})</small>' for v in vals)+'</td></tr>'
+    peaks=collections.Counter(SEA[t]["peak"] for t in ts); pk=peaks.most_common(1)[0][0]
+    topattr=list(D["attrs"][st].values())[0][0]
+    ins=[(f'{round(100*stv/d["total_volume"])}%',f"of total search demand is {st}","Keyword listing"),
+         (pk,f"is the most common peak month across {st} topics","Google Ads, 48 months"),
+         (f'{round(100*B["brand"]/(B["brand"]+B["non"]),1)}%',f"of {st} demand carries the Oikos name","Keyword listing"),
+         (esc(topattr["v"]),f'leads {list(D["attrs"][st].keys())[0].lower()} ({topattr["vol"]:,}/mo)',"Rule-based tags")]
+    return head(s["part"],s["name"],f"{st} is {round(100*stv/d['total_volume'])}% of demand and peaks mostly in {pk}.")+insights(ins)+\
+        f'<div class="two"><div class="vis"><h4>Search demand by topic</h4>{vrows}</div><div class="vis"><h4>Seasonality index by month (1.00 = average month)</h4><table class="heat">{hr}{hb}</table></div></div>'+\
+        f'<div class="vis"><h4>Attribute view: top values by search volume</h4><table class="tbl">{atr}</table></div>'+\
+        '<div class="note">Demand bars use one fixed scale across slides (0 to 70% of total demand). Attributes are rule-based tags on the keyword listing, not yet validated; volumes are monthly averages and a keyword can carry several values.</div>'+reco(RECO_TBD)
 
 FUNNEL_OF={t:f for f,ts in STAGE_TOPICS.items() for t in ts}
 
@@ -267,7 +316,7 @@ for p in outline["parts"]:
         subs.append((f"Part {p['id']:02d} · {p['label']}", f'<div class="divider"><div class="sl">Part {p["id"]:02d}</div><h2>{esc(p["label"])}</h2><p>{esc(p["phrase"])}</p></div>'))
     for s in p["slides"]:
         s["part"] = f'{p["id"]:02d} · {p["label"]}'; CUR[0] = s["part"]
-        body = {"cover": cover, "method": method, "treemap": treemap, "sov": sov, "season": season, "ai_global": ai_global, "sentiment": sentiment, "summary": summary, "stage_seo": lambda: stage_seo(s), "bench": lambda: bench(s), "ai_stage": lambda: ai_stage(s)}.get(s["tpl"], lambda: todo(s))()
+        body = {"cover": cover, "method": method, "treemap": treemap, "sov": sov, "brand": brand, "stage_demand": lambda: stage_demand(s), "season": season, "ai_global": ai_global, "sentiment": sentiment, "summary": summary, "stage_seo": lambda: stage_seo(s), "bench": lambda: bench(s), "ai_stage": lambda: ai_stage(s)}.get(s["tpl"], lambda: todo(s))()
         subs.append((f'Slide {s["n"]} of {TOTAL} · {s["name"]}', f'<div class="slide-in">{body}</div>'))
     sl = "".join(f'<section class="ss" data-name="{esc(n)}">{b}</section>' for n, b in subs)
     parts_html += f'<div class="part" data-p="{p["id"]}"><div class="track">{sl}</div></div>'

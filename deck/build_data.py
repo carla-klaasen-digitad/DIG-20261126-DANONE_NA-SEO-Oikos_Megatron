@@ -12,7 +12,11 @@ FUNNEL = {"Moment":"Discover","Recipe":"Discover","Health":"Discover","Ingredien
 SOVDIR = {"Moment":"moment","Recipe":"recipe","Health":"health","Ingredient":"ingredients","Testimonial":"testimonial",
           "Product":"product","Flavor":"flavor","Packaging":"packaging","Purchase":"purchase"}
 num = lambda x: float(x) if str(x).replace('.','',1).replace('-','',1).isdigit() else None
-BRAND_RE = re.compile(r"oik|okio|oyko|oiko")
+_BT = re.compile(r"^(oik\w*|okio\w*|oyko\w*|oiko\w*|orkos?|\w*ikos|okos|oyks|okai|okies?)$")
+class _BR:
+    @staticmethod
+    def search(k): return any(_BT.match(w) for w in k.split())
+BRAND_RE=_BR
 COMP = {"Chobani":"chobani.com","fairlife":"fairlife.com","Premier Protein":"premierprotein.com"}
 
 def sections(path):
@@ -31,13 +35,14 @@ def sections(path):
 import difflib
 _wb=openpyxl.load_workbook(proj/'Masterlist_Oikos_Megatron_MASTER.xlsx',read_only=True)
 _it=_wb['Keywords Listing Updated'].iter_rows(values_only=True); next(_it)
-BM={str(r[1]).strip().lower():r[26] for r in _it if r[1]}
+BM={str(r[1]).strip().lower():(r[26],str(r[18] or '')) for r in _it if r[1]}
 EXTRA={'ozark','oak','oaks','ocos','yogurt that starts with o','triple o','tripple zero','triple zero'}
 def isbrand(k):
-    # brand = master says Branded, or the keyword contains Oikos / a close misspelling (token similarity >= 0.6)
+    # brand = master says Branded, or the keyword contains Oikos / a close misspelling (token similarity >= 0.8)
     k=k.strip().lower()
-    if BM.get(k)=='Branded' or BRAND_RE.search(k): return True
-    if any(difflib.SequenceMatcher(None,w,'oikos').ratio()>=0.6 for w in k.split()): return True
+    lab_,tag=BM.get(k,(None,''))
+    if (lab_=='Branded' and 'oikos' in tag.lower()) or BRAND_RE.search(k): return True
+    if any(difflib.SequenceMatcher(None,w,'oikos').ratio()>=0.8 for w in k.split()): return True
     return any(e in k for e in EXTRA)
 seo={}
 for t in TOPICS:
@@ -120,3 +125,34 @@ for t in TOPICS:
     s=seo[t]; o=s['oikos']
     print(t, 'SOVrank',o['rank'] if o else None, o['sov'] if o else None, 'kwTraffic',s['oikos_traffic_keywords'],'TZ',s['oikos_triplezero_traffic'],'brandKW',s['oikos_brand_kw_traffic'], '| peak',season[t]['peak'],'| AI',ai[t]['n'],ai[t]['avg_visibility'],ai[t]['zero'])
 print(allmen)
+
+# --- brand demand and attributes (master, canonical keywords only)
+ATTR_BY_STAGE={"Discover":[("Moments",24),("Recipes",25),("Benefits",21)],
+               "Evaluate":[("Ingredient",17),("Testimonials",22),("Benefits",21)],
+               "Buy":[("Taste",15),("Packaging",16),("Yogurt types",14)]}
+BRAND_OK=["Oikos","Premier Protein","Fairlife","Chobani","Good Culture","Oikos Pro","OWYN","Orgain","Muscle Milk","Noosa"]
+bd={"stage":{s:{"brand":0.0,"non":0.0} for s in ("Discover","Evaluate","Buy")},"top_branded":[],"brands":collections.Counter()}
+attrs={st:{a:collections.Counter() for a,_ in L} for st,L in ATTR_BY_STAGE.items()}
+_it=_wb['Keywords Listing Updated'].iter_rows(values_only=True); next(_it)
+topbr=[]
+for r in _it:
+    if not r[1] or r[3] not in FUNNEL: continue
+    if r[43] and not str(r[43]).startswith('Canonical'): continue
+    v=[x for x in r[45:93] if isinstance(x,(int,float))]; a=sum(v)/len(v) if v else (r[44] if isinstance(r[44],(int,float)) else 0)
+    st=FUNNEL[r[3]]
+    if isbrand(str(r[1])): bd["stage"][st]["brand"]+=a; topbr.append((a,str(r[1])))
+    else: bd["stage"][st]["non"]+=a
+    if r[18]:
+        for b in str(r[18]).split(','):
+            if b.strip() in BRAND_OK: bd["brands"][b.strip()]+=a
+    for an,ci in ATTR_BY_STAGE[st]:
+        if r[ci]:
+            for val in str(r[ci]).split(','): attrs[st][an][val.strip()]+=a
+topbr.sort(reverse=True)
+bd["top_branded"]=[{"kw":k,"vol":round(a)} for a,k in topbr[:10]]
+bd["brands"]=[{"brand":k,"vol":round(v)} for k,v in bd["brands"].most_common()]
+bd["stage"]={k:{x:round(y) for x,y in v.items()} for k,v in bd["stage"].items()}
+out["brand"]=bd
+out["attrs"]={st:{a:[{"v":k,"vol":round(x)} for k,x in c.most_common(4)] for a,c in d_.items()} for st,d_ in attrs.items()}
+(root/'data/deck_data.json').write_text(json.dumps(out,indent=1))
+print(bd["stage"]); print(bd["top_branded"][:6])

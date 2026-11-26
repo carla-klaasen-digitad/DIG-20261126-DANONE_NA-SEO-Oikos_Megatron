@@ -46,3 +46,4 @@ main{position:fixed;top:96px;bottom:48px;left:0;right:0}.part{display:none;heigh
 .stgh{font-size:10px;font-weight:800;color:var(--brand);text-transform:uppercase;margin:10px 0 2px;letter-spacing:.06em}
 .toggle{display:flex;gap:6px;margin-bottom:8px}.tg{border:0;background:var(--surface);color:var(--muted);font:600 11px Poppins;padding:4px 12px;border-radius:99px;cursor:pointer}.tg.on{background:var(--brand);color:#fff}
 .brow.axis{margin:0}.ax{display:flex;justify-content:space-between;font-size:10px;color:var(--muted);border-top:1px solid #ddd}
+.steps{margin-bottom:12px}

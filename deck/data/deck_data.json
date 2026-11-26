@@ -325,7 +325,7 @@
    },
    "oikos_traffic_keywords": 97538,
    "oikos_triplezero_traffic": 25846,
-   "oikos_brand_kw_traffic": 97366,
+   "oikos_brand_kw_traffic": 97256,
    "competitors": {
     "Chobani": {
      "sov": 3.07,
@@ -1856,5 +1856,275 @@
   "nurri": 4
  },
  "ai_total": 111,
- "ai_zero": 31
+ "ai_zero": 31,
+ "brand": {
+  "stage": {
+   "Discover": {
+    "brand": 18852,
+    "non": 1689256
+   },
+   "Evaluate": {
+    "brand": 11296,
+    "non": 925737
+   },
+   "Buy": {
+    "brand": 407318,
+    "non": 5490201
+   }
+  },
+  "top_branded": [
+   {
+    "kw": "oikos tripe zero",
+    "vol": 66017
+   },
+   {
+    "kw": "oikos yogurt",
+    "vol": 60500
+   },
+   {
+    "kw": "okio yogurt",
+    "vol": 53629
+   },
+   {
+    "kw": "oikos protein yogurt",
+    "vol": 33100
+   },
+   {
+    "kw": "oiko protein shake",
+    "vol": 27247
+   },
+   {
+    "kw": "oikos",
+    "vol": 27188
+   },
+   {
+    "kw": "okios protein yogurt",
+    "vol": 21065
+   },
+   {
+    "kw": "oikos pro",
+    "vol": 8981
+   },
+   {
+    "kw": "oikos protein shakes",
+    "vol": 7600
+   },
+   {
+    "kw": "tripple zero yogurt",
+    "vol": 5629
+   }
+  ],
+  "brands": [
+   {
+    "brand": "Oikos",
+    "vol": 312531
+   },
+   {
+    "brand": "Premier Protein",
+    "vol": 304464
+   },
+   {
+    "brand": "Fairlife",
+    "vol": 158152
+   },
+   {
+    "brand": "Chobani",
+    "vol": 98724
+   },
+   {
+    "brand": "Good Culture",
+    "vol": 91262
+   },
+   {
+    "brand": "Oikos Pro",
+    "vol": 89130
+   },
+   {
+    "brand": "OWYN",
+    "vol": 73587
+   },
+   {
+    "brand": "Orgain",
+    "vol": 58836
+   },
+   {
+    "brand": "Muscle Milk",
+    "vol": 58683
+   },
+   {
+    "brand": "Noosa",
+    "vol": 54523
+   }
+  ]
+ },
+ "attrs": {
+  "Discover": {
+   "Moments": [
+    {
+     "v": "Snack",
+     "vol": 305946
+    },
+    {
+     "v": "Breakfast",
+     "vol": 167059
+    },
+    {
+     "v": "Post-workout",
+     "vol": 46034
+    },
+    {
+     "v": "Pre-workout",
+     "vol": 40771
+    }
+   ],
+   "Recipes": [
+    {
+     "v": "Recipe (general)",
+     "vol": 223499
+    },
+    {
+     "v": "Baking",
+     "vol": 59726
+    },
+    {
+     "v": "Smoothie",
+     "vol": 39341
+    },
+    {
+     "v": "Frozen",
+     "vol": 22859
+    }
+   ],
+   "Benefits": [
+    {
+     "v": "High protein",
+     "vol": 824664
+    },
+    {
+     "v": "Muscle gain",
+     "vol": 228161
+    },
+    {
+     "v": "Healthy",
+     "vol": 105804
+    },
+    {
+     "v": "Weight loss",
+     "vol": 80543
+    }
+   ]
+  },
+  "Evaluate": {
+   "Ingredient": [
+    {
+     "v": "Added sugar",
+     "vol": 54341
+    },
+    {
+     "v": "Lactose",
+     "vol": 33851
+    },
+    {
+     "v": "Ultra-filtered milk",
+     "vol": 31498
+    },
+    {
+     "v": "Chicory root / fiber",
+     "vol": 13044
+    }
+   ],
+   "Testimonials": [
+    {
+     "v": "Comparison",
+     "vol": 49519
+    },
+    {
+     "v": "Reviews",
+     "vol": 19029
+    },
+    {
+     "v": "Reddit / forums",
+     "vol": 81
+    },
+    {
+     "v": "Complaints",
+     "vol": 22
+    }
+   ],
+   "Benefits": [
+    {
+     "v": "High protein",
+     "vol": 106599
+    },
+    {
+     "v": "Muscle gain",
+     "vol": 61119
+    },
+    {
+     "v": "Low sugar",
+     "vol": 46195
+    },
+    {
+     "v": "Weight loss",
+     "vol": 34848
+    }
+   ]
+  },
+  "Buy": {
+   "Taste": [
+    {
+     "v": "Strawberry",
+     "vol": 33785
+    },
+    {
+     "v": "Mixed Berry",
+     "vol": 33480
+    },
+    {
+     "v": "Vanilla",
+     "vol": 31159
+    },
+    {
+     "v": "Cherry",
+     "vol": 28441
+    }
+   ],
+   "Packaging": [
+    {
+     "v": "Drink / Bottle",
+     "vol": 590410
+    },
+    {
+     "v": "Cup",
+     "vol": 22380
+    },
+    {
+     "v": "Shot",
+     "vol": 6492
+    },
+    {
+     "v": "Multipack",
+     "vol": 1219
+    }
+   ],
+   "Yogurt types": [
+    {
+     "v": "High protein",
+     "vol": 193749
+    },
+    {
+     "v": "Plain",
+     "vol": 66684
+    },
+    {
+     "v": "Drinkable",
+     "vol": 62539
+    },
+    {
+     "v": "Skyr",
+     "vol": 15086
+    }
+   ]
+  }
+ }
 }

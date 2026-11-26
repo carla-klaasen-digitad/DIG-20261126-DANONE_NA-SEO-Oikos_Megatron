@@ -9,12 +9,12 @@
     {
      "n": 1,
      "tpl": "cover",
-     "name": "Cover and mandate"
+     "name": "Cover, mandate and agenda"
     },
     {
      "n": 2,
      "tpl": "method",
-     "name": "Method and how to read"
+     "name": "Method, glossary and limits"
     }
    ]
   },
@@ -31,93 +31,72 @@
     {
      "n": 4,
      "tpl": "sov",
-     "name": "Where Oikos wins and loses in Google",
-     "visual": "Bubble matrix by topic: X = volume (log), Y = share of voice, bubble = uncaptured potential",
-     "needs": "SE Ranking share of voice (Global export)",
-     "note": "Known from the 9 topic exports: about 99% of Oikos share of voice is brand search."
+     "name": "Oikos against competitors in Google"
     },
     {
      "n": 5,
-     "tpl": "season",
-     "name": "When the demand arrives",
-     "visual": "Heatmap: 9 topics x 12 months, peak month circled",
-     "needs": "Google Ads seasonality (already in the master)"
+     "tpl": "brand",
+     "name": "The demand that carries the Oikos name"
     },
     {
      "n": 6,
      "tpl": "ai_global",
-     "name": "Who answers in AI instead of Oikos",
-     "visual": "Visibility by topic (left), brand and cited-source ranking (right), Oikos in red",
-     "needs": "SE Visible exports (global): prompts, competitors, sources"
+     "name": "Who answers in AI instead of Oikos"
     }
    ]
   },
   {
    "id": 2,
    "label": "Discover",
-   "phrase": "Moment, Recipe and Health: how people first find a high-protein option.",
+   "phrase": "Moment, Recipe and Health: how people first look for a high-protein option.",
    "slides": [
     {
      "n": 7,
-     "tpl": "stage_seo",
-     "name": "Demand and SEO: Moment, Recipe, Health",
-     "visual": "Bars by topic with coverage",
-     "needs": "Keyword volumes, SE Ranking share of voice (Discover)",
-     "stage": "Discover"
+     "tpl": "stage_demand",
+     "stage": "Discover",
+     "name": "Demand, trends and attributes"
     },
     {
      "n": 8,
      "tpl": "bench",
-     "name": "SEO benchmark against the 2 competitors",
-     "visual": "Share of voice comparison, Oikos vs competitor 1 and 2",
-     "needs": "Competitor share of voice exports (competitors not chosen yet)",
-     "stage": "Discover"
+     "stage": "Discover",
+     "name": "SEO competitive environment"
     },
     {
      "n": 9,
      "tpl": "ai_stage",
-     "name": "AI visibility and prompts to target",
-     "visual": "Visibility heatmap and the 3 prompts to target",
-     "needs": "SE Visible per topic",
-     "stage": "Discover"
+     "stage": "Discover",
+     "name": "Visibility in AI answers"
     }
    ]
   },
   {
    "id": 3,
    "label": "Evaluate",
-   "phrase": "Ingredients and Testimonial: what people read and fear before they buy.",
+   "phrase": "Ingredients and Testimonial: what people read and worry about before they buy.",
    "slides": [
     {
      "n": 10,
-     "tpl": "stage_seo",
-     "name": "Demand and SEO: Ingredients, Testimonial",
-     "visual": "Bars by topic with coverage",
-     "needs": "Keyword volumes, SE Ranking share of voice (Evaluate)",
-     "stage": "Evaluate"
+     "tpl": "stage_demand",
+     "stage": "Evaluate",
+     "name": "Demand, trends and attributes"
     },
     {
      "n": 11,
-     "tpl": "sentiment",
-     "name": "Taste and texture sentiment",
-     "visual": "Complaint themes (thin, grainy, sour, chalky), recipe change. Core of the study.",
-     "needs": "SE Visible prompts and sentiment"
+     "tpl": "bench",
+     "stage": "Evaluate",
+     "name": "SEO competitive environment"
     },
     {
      "n": 12,
-     "tpl": "bench",
-     "name": "SEO benchmark against the 2 competitors",
-     "visual": "Share of voice comparison",
-     "needs": "Competitor share of voice exports",
-     "stage": "Evaluate"
+     "tpl": "sentiment",
+     "name": "Taste and texture in AI answers"
     },
     {
      "n": 13,
      "tpl": "ai_stage",
-     "name": "AI visibility and prompts to target",
-     "visual": "Visibility heatmap",
-     "needs": "SE Visible per topic",
-     "stage": "Evaluate"
+     "stage": "Evaluate",
+     "name": "Visibility in AI answers"
     }
    ]
   },
@@ -128,69 +107,54 @@
    "slides": [
     {
      "n": 14,
-     "tpl": "stage_seo",
-     "name": "Demand and SEO: Product, Flavor, Packaging, Purchase",
-     "visual": "Bars by topic with coverage",
-     "needs": "Keyword volumes, SE Ranking share of voice (Buy)",
-     "stage": "Buy"
+     "tpl": "stage_demand",
+     "stage": "Buy",
+     "name": "Demand, trends and attributes"
     },
     {
      "n": 15,
      "tpl": "bench",
-     "name": "SEO benchmark against the 2 competitors",
-     "visual": "Share of voice comparison",
-     "needs": "Competitor share of voice exports",
-     "stage": "Buy"
+     "stage": "Buy",
+     "name": "SEO competitive environment"
     },
     {
      "n": 16,
      "tpl": "ai_stage",
-     "name": "AI visibility, price and shrinkflation",
-     "visual": "Visibility heatmap, price and size questions",
-     "needs": "SE Visible per topic",
-     "stage": "Buy"
+     "stage": "Buy",
+     "name": "Visibility in AI answers, price and shrinkflation"
     }
    ]
   },
   {
    "id": 5,
-   "label": "Beyond search",
-   "phrase": "Social conversation and retail platforms add context to search.",
-   "slides": [
-    {
-     "n": 17,
-     "tpl": "todo",
-     "name": "Social listening and retail platforms",
-     "visual": "To be defined with Thomas",
-     "needs": "Social listening and retail data (Thomas)"
-    }
-   ]
-  },
-  {
-   "id": 6,
    "label": "Recommendations",
    "phrase": "What to do first, in Google and in AI answers.",
    "slides": [
     {
-     "n": 18,
+     "n": 17,
      "tpl": "todo",
-     "name": "SEO and GEO prioritization matrix",
-     "visual": "Blank skeleton. Layout to be set from the boss's baseline matrix (Oikos US Matrice de prio) once its data source is confirmed",
-     "needs": "Confirm how the baseline matrix data was produced; confirm the 2 competitors"
+     "name": "Social signals and retail platforms",
+     "visual": "One card per platform (YouTube, Reddit, Meta, media sites, retail platforms): what is said about Oikos Pro, with a verdict to target, watch or ignore",
+     "needs": "Social listening and retail platform data (Thomas)"
+    },
+    {
+     "n": 18,
+     "tpl": "summary",
+     "name": "Synthesis and prioritization"
     },
     {
      "n": 19,
-     "tpl": "summary",
-     "name": "Summary: verdict per funnel stage",
-     "visual": "Table with P1 / P2 / P3 per stage",
-     "needs": "Slides 4 to 16"
+     "tpl": "todo",
+     "name": "SEO and GEO prioritization matrix",
+     "visual": "Matrix with the 2 inspirational competitors, for SEO and for GEO. Layout to follow the boss's baseline matrix (Oikos US Matrice de prio).",
+     "needs": "Confirm how the baseline matrix data was produced; confirm the 2 competitors"
     },
     {
      "n": 20,
      "tpl": "todo",
-     "name": "Action plan and writer scope",
-     "visual": "Cards: topic, format, channel, target, priority",
-     "needs": "Recommendations from slides 4 to 16 (not written), Thomas's writer role email"
+     "name": "Next steps and production plan",
+     "visual": "Timeline of next steps, plus production plan cards: topic, format, channel, target, priority, writer scope",
+     "needs": "Recommendations (not written), Thomas's writer role email"
     }
    ]
   }
